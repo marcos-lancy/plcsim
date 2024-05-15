@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SimTableApplication">
+
+    <!-- Images -->
+    <BitmapImage x:Key="New" UriSource="../Images/New.png" />
+    <BitmapImage x:Key="Open" UriSource="../Images/Open.png" />
+    <BitmapImage x:Key="Save" UriSource="../Images/Save.png" />
+    <BitmapImage x:Key="Reset" UriSource="../Images/Reset.png" />
+    <BitmapImage x:Key="MemoryCard" UriSource="../Images/ICO_PE_CardMemory.png" />
+    <BitmapImage x:Key="CreateNew" UriSource="../Images/ICO_PE_CreateNewItem.ico" />
+    <BitmapImage x:Key="Add" UriSource="../Images/Add_SimTag.png" />
+    <BitmapImage x:Key="Device" UriSource="../Images/ICO_PE_Device.ico" />
+    <BitmapImage x:Key="Project" UriSource="../Images/ICO_PE_Project.ico" />
+    <BitmapImage x:Key="Delete" UriSource="../Images/ICO_PE_TbDelete.ico" />
+    <BitmapImage x:Key="SimTable" UriSource="../Images/ICO_PLCS_SimTable.ico" />
+    <BitmapImage x:Key="SimTableFolder" UriSource="../Images/ICO_PLCS_SimTableFolder.ico" />
+    <BitmapImage x:Key="SimTableIcon" UriSource="../Images/SimTableIcon.png" />
+    <BitmapImage x:Key="Off" UriSource="../Images/ICO_PLCSIM_Tboff.ico" />
+    <BitmapImage x:Key="On" UriSource="../Images/ICO_PLCSIM_Tbon.ico" />
+    <BitmapImage x:Key="Properties" UriSource="../Images/ICO_PVS_Properties.png" />
+    <BitmapImage x:Key="Close" UriSource="../Images/ICO_WEB_Close.png" />
+    <BitmapImage x:Key="PLCSIM_ADV" UriSource="../Images/IconPLCSIM_ADV.ico" />
+    <BitmapImage x:Key="SiemensLogo" UriSource="../Images/Siemens-logo_svg.png" />
+    <BitmapImage x:Key="StartSimulation" UriSource="../Images/StartSimulation.png" />
+    <BitmapImage x:Key="StopSimulation" UriSource="../Images/StopSimulation.png" />
+    <BitmapImage x:Key="Rename" UriSource="../Images/Rename-icon.png" />
+    <BitmapImage x:Key="Modify" UriSource="../Images/Modify.ico" />
+    <BitmapImage x:Key="Tag" UriSource="../Images/ICO_PE_Tag.ico" />
+    <BitmapImage x:Key="Export" UriSource="../Images/ICO_PE_TbExportList.ico" />
+    <BitmapImage x:Key="Import" UriSource="../Images/ICO_PE_TbImportList.ico" />
+    <BitmapImage x:Key="About" UriSource="../Images/About.png" />
+    <BitmapImage x:Key="Software" UriSource="../Images/Installed Software.png" />
+
+    <BitmapImage x:Key="Background" UriSource="../Images/background.png" />
+
+</ResourceDictionary>

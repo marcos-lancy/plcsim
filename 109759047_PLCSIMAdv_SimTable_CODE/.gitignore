@@ -1,0 +1,14 @@
+*.suo
+*.user
+
+*.[Cc]ache
+[Tt]humbs.db
+[Dd]esktop.ini
+
+/packages
+/SimTableApplication/bin
+/SimTableApplication/obj
+/SimTableApplication.Core/bin
+/SimTableApplication.Core/obj
+/SimTableApplication.PLCSIM_Advanced/bin
+/SimTableApplication.PLCSIM_Advanced/obj

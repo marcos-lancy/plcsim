@@ -1,0 +1,68 @@
+﻿<Window x:Class="SimTableApplication.Views.Dialogs.LoadAllProjectTagsFilterDialog"
+        x:Name="LoadAllProjectTags"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:local="clr-namespace:SimTableApplication.ViewModels.DialogViewModels"
+        mc:Ignorable="d"
+        md:DialogServiceViews.IsRegistered="True"       
+        Title="Load all Project Tags" Height="165" Width="300"
+        ResizeMode="NoResize"
+        Icon="{StaticResource Tag}"
+        WindowStartupLocation="CenterOwner"
+        Background="#cccccc"
+        d:DataContext="{d:DesignInstance {x:Type local:LoadAllProjectTagsFilterDialogViewModel}}">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger SourceObject="{Binding}" EventName="Closed">
+            <ei:CallMethodAction TargetObject="{Binding ElementName=LoadAllProjectTags}" MethodName="Close"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <DockPanel LastChildFill="True" >
+        <StackPanel Background="#b2b2b2" DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right"  >
+            <Button IsDefault="True" Command="{Binding LoadCommand}" Content="Load" Margin="115,10,5,10" Width="80" />
+            <Button IsCancel="True"  Command="{Binding CancelCommand}" Content="Cancel" Margin="5,10,10,10" Width="80" />
+        </StackPanel>
+
+        <Grid Margin="10,0,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Margin="5">
+                <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsInputsSelected}" />
+                <Label Content="Inputs" Margin="1" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Margin="5">
+                <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsOutputsSelected}" />
+                <Label Content="Outputs" Margin="1" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="5">
+                <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsDbSelected}"/>
+                <Label Content="Data blocks" Margin="1" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="5">
+                <CheckBox VerticalAlignment="Center" IsChecked="{Binding IsMemorySelected}" />
+                <Label Content="Memory bits" Margin="1" />
+            </StackPanel>
+
+        </Grid>
+
+    </DockPanel>
+</Window>

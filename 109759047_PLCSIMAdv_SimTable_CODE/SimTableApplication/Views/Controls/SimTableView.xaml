@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="SimTableApplication.Views.Controls.SimTableView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"             
+             xmlns:local="clr-namespace:SimTableApplication.Views.Controls"
+             xmlns:viewModel ="clr-namespace:SimTableApplication.ViewModels"
+             xmlns:utils="clr-namespace:SimTableApplication.Utils"
+             xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"             
+             xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs" 
+             mc:Ignorable="d"
+             md:DialogServiceViews.IsRegistered="True"
+             d:DataContext="{d:DesignInstance Type=viewModel:SimTableViewModel}"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding DeleteSimTagCommand}" Key="Delete" />
+    </UserControl.InputBindings>
+    <UserControl.Resources>
+        <Style x:Key="alternateColor" TargetType="{x:Type ListViewItem}">
+            <Style.Triggers>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                    <Setter Property="Background" Value="#f0f0f0"/>
+                </Trigger>
+                <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                    <Setter Property="Background" Value="WhiteSmoke"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#c1cee9"/>
+                </Trigger>
+                <DataTrigger Binding="{Binding IsValid}" Value="false">
+                    <Setter Property="Foreground" Value="Red" />
+                </DataTrigger>
+            </Style.Triggers>
+            <!--<Setter Property="HorizontalContentAlignment" Value="Stretch" />-->
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+        <DataTemplate x:Key="AutoCompleteBoxItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding TagName}" />
+                <Label Content="{Binding DataType}"/>
+                <Label Content="{Binding Area}"/>
+            </StackPanel>
+        </DataTemplate>
+        <utils:SimTagMultiValueConverter x:Key="MultiConverter" />
+    </UserControl.Resources>
+
+    <DockPanel >
+        <Border DockPanel.Dock="Top" BorderThickness="2" BorderBrush="Gray">
+            <StackPanel Orientation="Horizontal" Background="#F0F0F0" >
+                <Label Content="Tags: " VerticalAlignment="Center"/>
+                <toolkit:AutoCompleteBox Height="25" Width="Auto" MinWidth="150"
+                                     ItemsSource="{Binding AllTagsView}"
+                                     ItemTemplate="{StaticResource AutoCompleteBoxItemTemplate}" 
+                                     ValueMemberPath="TagName"
+                                     SelectedItem="{Binding SelectedSimTag, Mode=TwoWay}"                                       
+                                     IsTextCompletionEnabled="True" 
+                                     FilterMode="Contains" 
+                                     VerticalContentAlignment="Center" 
+                                     Margin="2" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewKeyDown">
+                            <cmd:EventToCommand Command="{Binding AddCommand}" PassEventArgsToCommand="True"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </toolkit:AutoCompleteBox>
+                <Button Height="22" Width="22" Margin="5" Command="{Binding AddButtonCommand}" Background="Transparent" BorderThickness="0" ToolTip="add selected value" Style="{StaticResource ButtonStyle}">
+                    <StackPanel  >
+                        <Image Source="{StaticResource Add}" RenderOptions.BitmapScalingMode="HighQuality" Height="20" Width="20" />
+                    </StackPanel>
+                </Button>
+                <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="LightGray" />
+                <Button Height="22" Width="22" Margin="5" Command="{Binding WriteCommand}" Background="Transparent" BorderThickness="0" ToolTip="modify all selected values" Style="{StaticResource ButtonStyle}">
+                    <StackPanel  >
+                        <Image Source="{StaticResource Modify}" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16" />
+                    </StackPanel>
+                </Button>
+                <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="LightGray" />
+                <Button Height="22" Width="22" Margin="5" Command="{Binding LoadAllTagsCommand}" Background="Transparent" BorderThickness="0" Style="{StaticResource ButtonStyle}">
+                    <StackPanel  ToolTip="load all tags">
+                        <Image Source="{StaticResource Tag}" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16" />
+                    </StackPanel>
+                </Button>
+                <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="LightGray" />
+                <Button Command="{Binding ExportCsvCommand}" Height="22" Width="22" Margin="5" Background="Transparent" BorderThickness="0" Style="{StaticResource ButtonStyle}">
+                    <StackPanel  ToolTip="export to excel">
+                        <Image Source="{StaticResource Export}" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16" />
+                    </StackPanel>
+                </Button>
+                <Button Command="{Binding ImportCsvCommand}" Height="22" Width="22" Margin="5" Background="Transparent" BorderThickness="0" Style="{StaticResource ButtonStyle}">
+                    <StackPanel  ToolTip="import from excel">
+                        <Image Source="{StaticResource Import}" RenderOptions.BitmapScalingMode="HighQuality" Height="16" Width="16" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Grid DockPanel.Dock="Bottom" >
+            <ListView Background="#e1e1e1" Name="ListView" AlternationCount="2" ItemContainerStyle="{StaticResource alternateColor}" SelectionMode="Extended" BorderThickness="1" ItemsSource="{Binding SelectedTags , NotifyOnTargetUpdated=True}" SelectedItem="{Binding SelectedSimTag}"  TargetUpdated="ListView_TargetUpdated" >
+                <ListView.InputBindings>
+                    <KeyBinding Key="Delete" Command="{Binding DeleteSimTagCommand}" CommandParameter="{Binding ElementName=ListView, Path=SelectedItems}" />
+                </ListView.InputBindings>
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Delete" CommandParameter="{Binding Path=PlacementTarget.SelectedItems, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type ContextMenu}}}" Command="{Binding DeleteSimTagCommand}" >
+                            <MenuItem.Icon>
+                                <Image RenderOptions.BitmapScalingMode="HighQuality"  Source="{StaticResource Delete}"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=TagName, NotifyOnTargetUpdated=True}"/>
+                        <GridViewColumn Header="Datatype" DisplayMemberBinding="{Binding Path=DataType, NotifyOnTargetUpdated=True}"/>
+                        <GridViewColumn Header="Area" DisplayMemberBinding="{Binding Path=Area, NotifyOnTargetUpdated=True}"/>
+                        <GridViewColumn Header="Value" >
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox MinWidth="80" BorderThickness="0" Background="Transparent">
+                                        <TextBox.Text>
+                                            <MultiBinding Converter="{StaticResource MultiConverter}">
+                                                <Binding Path="DataType"/>
+                                                <Binding Path="Value"/>
+                                            </MultiBinding>
+                                        </TextBox.Text>
+                                    </TextBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="auto" Header="Modify value" >
+                            <GridViewColumn.CellTemplate >
+                                <DataTemplate>
+                                    <TextBox MinWidth="80" Text="{Binding Path=ModifyValue}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn  >
+                            <GridViewColumn.Header>
+                                <StackPanel Orientation="Horizontal" ToolTip="check box for selecting the values to be modified">
+                                    <Image Source="{StaticResource Modify}" RenderOptions.BitmapScalingMode="HighQuality" />
+                                </StackPanel>
+                            </GridViewColumn.Header>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Path=IsSelected}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+
+        </Grid>
+    </DockPanel>
+</UserControl>

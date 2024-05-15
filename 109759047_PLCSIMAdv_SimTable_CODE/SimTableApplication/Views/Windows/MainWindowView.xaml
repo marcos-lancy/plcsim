@@ -1,0 +1,276 @@
+﻿<Window x:Class="SimTableApplication.Views.Windows.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+        xmlns:local="clr-namespace:SimTableApplication"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        xmlns:vm="clr-namespace:SimTableApplication.ViewModels"
+        xmlns:view="clr-namespace:SimTableApplication.Views.Controls"
+        xmlns:model="clr-namespace:SimTableApplication.Models"
+        xmlns:behav="clr-namespace:SimTableApplication.Utils"
+        mc:Ignorable="d"
+        md:DialogServiceViews.IsRegistered="True"
+        Title= "PLCSIM Advanced Simulation Tables"
+        Icon="{StaticResource PLCSIM_ADV}"
+        Height="350" Width="525"
+        WindowState="Maximized"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        Background="#32353a">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:ProjectViewModel}">
+            <view:ProjectView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SimTableViewModel}">
+            <view:SimTableView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:VirtualControllerViewModel}">
+            <view:VirtualControllerView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SimTableDirectoryViewModel}">
+            <view:SimTableDirectoryView/>
+        </DataTemplate>
+    </Window.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName= "Closing">
+            <cmd:EventToCommand Command="{Binding CloseAppCommand}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Window.InputBindings>
+        <!-- File -->
+        <KeyBinding x:Name="KeyAddProject" Key="N" Modifiers="Control" Command="{Binding AddNewProjectCommand}" />
+        <KeyBinding x:Name="KeyOpenProject" Key="O" Modifiers="Control" Command="{Binding OpenProjectCommand}" />
+        <KeyBinding x:Name="KeyCloseProject" Key="W" Modifiers="Control" Command="{Binding CloseProjectCommand}" />
+        <KeyBinding x:Name="KeySaveProject" Key="S" Modifiers="Control" Command="{Binding SaveProjectCommand}" />
+        <KeyBinding x:Name="KeySaveAsProject" Key="F12" Command="{Binding SaveAsProjectCommand}" />
+        <KeyBinding x:Name="KeyExitApp" Key="F4" Modifiers="Alt" Command="{Binding CloseAppCommand}" />
+        <KeyBinding Key="F1" Command="{Binding ShowAboutCommand}" />
+       
+    </Window.InputBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="#CCCCCC"  BorderThickness="0" >
+            <Menu.ItemContainerStyle>
+                <Style TargetType="{x:Type MenuItem}">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Margin" Value="1"/>
+                </Style>
+            </Menu.ItemContainerStyle>
+            <MenuItem Header="Project">
+                <MenuItem Header="New..." InputGestureText="CTRL + N" Command="{Binding AddNewProjectCommand}">
+                    <MenuItem.Icon >
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource New}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Open..." InputGestureText="CTRL + O"  Command="{Binding OpenProjectCommand}">
+                    <MenuItem.Icon >
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Open}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Close" InputGestureText="CTRL + W" Command="{Binding CloseProjectCommand}"/>
+                <Separator />
+                <MenuItem Header="Save" InputGestureText="CTRL + S" Command="{Binding SaveProjectCommand}" >
+                    <MenuItem.Icon >
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Save}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Save As..." InputGestureText="F12" Command="{Binding SaveAsProjectCommand}" >
+                    <MenuItem.Icon >
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Save}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Exit" InputGestureText="Alt + F4" Command="{Binding CloseAppCommand}">
+                    <MenuItem.Icon>
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Close}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <!--<MenuItem Header="Installed software" >
+                    <MenuItem.Icon>
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Software}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />-->
+                <MenuItem Header="About" InputGestureText="F1" Command="{Binding ShowAboutCommand}" >
+                    <MenuItem.Icon>
+                        <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource About}"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>        
+        <Grid x:Name="LayoutRoot" Background="Transparent" DockPanel.Dock="Bottom">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" MinWidth="200"/>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TreeView Name="Tree" Grid.Column="0" ItemsSource="{Binding Projects}" Background="#F0F0F0" BorderThickness="0" behav:TreeViewInPlaceEditBehavior.IsEditable="True" >
+                <i:Interaction.Behaviors>
+                    <behav:TreeViewSelectedItemBehavior SelectedItem="{Binding SelectedTreeViewItem}"/>
+                </i:Interaction.Behaviors>
+                <TreeView.Resources>
+                    <Style TargetType="TreeViewItem">
+                        <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                        <Setter Property="IsExpanded" Value="True"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="FontWeight" Value="DemiBold"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <EventSetter Event="MouseRightButtonDown" Handler="TreeViewItem_MouseRightButtonDown"/>
+                    </Style>
+                </TreeView.Resources>
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Controllers}">                     
+                        <StackPanel Orientation="Horizontal" >
+                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Project}" Height="18" Width="18"/>
+                            <TextBlock Text="{Binding ProjModel.ProjectName}" Margin="3"/>
+                            <StackPanel.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Add new Controller" Command="{Binding AddNewControllerCommand}">
+                                        <MenuItem.Icon>
+                                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource CreateNew}"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <Separator />
+                                    <MenuItem Header="Properties" Command="{Binding ShowProjectPropertiesCommand}">
+                                        <MenuItem.Icon>
+                                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Properties}"/>
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                </ContextMenu>
+                            </StackPanel.ContextMenu>
+                        </StackPanel>
+                        <HierarchicalDataTemplate.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding SimTableDirectory}" >
+                                <StackPanel Orientation="Horizontal" Tag="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}, AncestorLevel=2}}">
+                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Device}" Height="18" Width="18"/>
+                                    <TextBlock Text="{Binding Name}" Margin="3"/>
+                                    <StackPanel.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Power On" Command="{Binding PowerOnCommand}">
+                                                <MenuItem.Icon >
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource On}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                            <MenuItem Header="Power Off" Command="{Binding PowerOffCommand}">
+                                                <MenuItem.Icon >
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Off}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                            <MenuItem Header="Run" Command="{Binding RunCommand}">
+                                                <MenuItem.Icon >
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource StartSimulation}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                            <MenuItem Header="Stop" Command="{Binding StopCommand}">
+                                                <MenuItem.Icon >
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource StopSimulation}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                            <MenuItem Header="MRES" Command="{Binding ResetMemoryCardCommand}">
+                                                <MenuItem.Icon >
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Reset}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                            <Separator />
+                                            <MenuItem Header="Delete from Project" Command="{Binding Path=PlacementTarget.Tag.DataContext.DeleteControllerCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu}}" CommandParameter="{Binding Name}" ToolTip="only deletes the controller from project!">
+                                                <MenuItem.InputBindings>
+                                                    <KeyBinding Key="Delete" Command="{Binding Path=PlacementTarget.Tag.DataContext.DeleteControllerCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu}}" CommandParameter="{Binding Name}"/>
+                                                </MenuItem.InputBindings>
+                                                <MenuItem.Icon>
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Delete}"/>
+                                                </MenuItem.Icon>
+                                            </MenuItem>
+                                        </ContextMenu>
+                                    </StackPanel.ContextMenu>
+                                </StackPanel>                                
+                                <HierarchicalDataTemplate.ItemTemplate>
+                                    <HierarchicalDataTemplate ItemsSource="{Binding SimTables}">
+                                        <StackPanel Orientation="Horizontal" Tag="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}, AncestorLevel=2}}">
+                                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource SimTableFolder}" Height="18" Width="18"/>
+                                            <TextBlock Text="{Binding Name}" Margin="3"/>
+                                            <StackPanel.ContextMenu>
+                                                <ContextMenu>
+                                                    <MenuItem Header="Add new SIM table" Command="{Binding AddNewSimTableCommand}">
+                                                        <MenuItem.Icon>
+                                                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource New}"/>
+                                                        </MenuItem.Icon>
+                                                    </MenuItem>                                          
+                                                </ContextMenu>
+                                            </StackPanel.ContextMenu>
+                                        </StackPanel>
+                                        <HierarchicalDataTemplate.ItemTemplate >
+                                            <DataTemplate >
+                                                <StackPanel Orientation="Horizontal" Tag="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeViewItem}, AncestorLevel=2}}">
+                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource SimTable}" Height="18" Width="18"/>
+                                                    <TextBlock  Text="{Binding SimTableName}" Margin="3" Visibility="Visible" x:Name="txtBlock"/>
+                                                    <TextBox Text="{Binding SimTableName, UpdateSourceTrigger=Explicit}" Visibility="Collapsed" x:Name="TextBox"/>
+                                                    <StackPanel.ContextMenu>
+                                                        <ContextMenu>                                                            
+                                                            <MenuItem Header="Rename" InputGestureText="F2" Command="{Binding RenameCommand}">
+                                                                <MenuItem.Icon>
+                                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Rename}"/>
+                                                                </MenuItem.Icon>
+                                                            </MenuItem>
+                                                            <Separator/>
+                                                            <MenuItem Header="Delete" Command="{Binding Path=PlacementTarget.Tag.DataContext.DeleteSimTableCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu}}" CommandParameter="{Binding SimTableName}">
+                                                                <MenuItem.Icon>
+                                                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{StaticResource Delete}"/>
+                                                                </MenuItem.Icon>                                                               
+                                                            </MenuItem>                                                            
+                                                        </ContextMenu>
+                                                    </StackPanel.ContextMenu>
+                                                </StackPanel>
+                                                <DataTemplate.Triggers>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding IsSelected}" Value="True"/>
+                                                            <Condition Binding="{Binding Path=(behav:TreeViewInPlaceEditBehavior.IsEditing), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeView}}}" Value="True"/>
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter TargetName="txtBlock" Property="Visibility" Value="Collapsed"/>
+                                                        <Setter TargetName="TextBox" Property="Visibility" Value="Visible"/>
+                                                        <Setter TargetName="TextBox" Property="behav:TreeViewInPlaceEditBoxBehavior.IsEditing">
+                                                            <Setter.Value>
+                                                                <Binding Path="(behav:TreeViewInPlaceEditBehavior.IsEditing)" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeView}}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                        <Setter TargetName="TextBox" Property="behav:TreeViewInPlaceEditBoxBehavior.IsEditConfirmed">
+                                                            <Setter.Value>
+                                                                <Binding Path="(behav:TreeViewInPlaceEditBehavior.IsEditConfirmed)" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeView}}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                        <Setter TargetName="TextBox" Property="behav:TreeViewInPlaceEditBoxBehavior.IsEditCancelled">
+                                                            <Setter.Value>
+                                                                <Binding Path="(behav:TreeViewInPlaceEditBehavior.IsEditCancelled)" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TreeView}}"/>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </MultiDataTrigger>
+                                                </DataTemplate.Triggers>
+                                            </DataTemplate>
+                                        </HierarchicalDataTemplate.ItemTemplate>
+                                    </HierarchicalDataTemplate>
+                                </HierarchicalDataTemplate.ItemTemplate>
+                            </HierarchicalDataTemplate>
+                        </HierarchicalDataTemplate.ItemTemplate>
+                    </HierarchicalDataTemplate>                    
+                </TreeView.ItemTemplate>
+            </TreeView>
+            <GridSplitter Grid.Column="1"
+                    Name="splitter"
+                    Width="4"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch"></GridSplitter>
+            <Border Grid.Row="0" Grid.Column="2" Background="#e1e1e1">                
+                <ContentControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Content="{Binding SelectedTreeViewItem, UpdateSourceTrigger=PropertyChanged}" />
+            </Border>
+        </Grid>
+
+    </DockPanel>
+</Window>

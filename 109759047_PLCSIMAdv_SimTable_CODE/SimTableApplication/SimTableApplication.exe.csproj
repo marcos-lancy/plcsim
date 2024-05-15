@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D17C91EE-5195-4B0E-8DB9-D9D099E8F864}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimTableApplication</RootNamespace>
+    <AssemblyName>SimTableApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DebugSymbols>false</DebugSymbols>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconPLCSIM_ADV.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SimTableApplication.exe.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.3\lib\net45\CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\The.Microsoft.Expression.Interactions.4.5.0\lib\net452\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MvvmDialogs, Version=5.1.0.0, Culture=neutral, PublicKeyToken=3d3b9708589bc73e, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmDialogs.5.1.0\lib\net45\MvvmDialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\The.Microsoft.Expression.Interactions.4.5.0\lib\net452\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Styles\Images.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\SimTableDirectoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\SimTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ProjectView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\VirtualControllerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\AddNewPlcDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\AddNewProjectDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Dialogs\LoadAllProjectTagsFilterDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\ProjectPropertiesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dialogs\RenameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LedView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Windows\MainWindowView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extensions\DependencyObjectExtension.cs" />
+    <Compile Include="Extensions\FrameworkElementExtension.cs" />
+    <Compile Include="Extensions\PropertyChangedEventHandlerExtensions.cs" />
+    <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\SimTableDirectoryModel.cs" />
+    <Compile Include="Models\SimTableModel.cs" />
+    <Compile Include="Models\VirtualControllerModel.cs" />
+    <Compile Include="Services\Implementation\BackgroundTaskService.cs" />
+    <Compile Include="Services\Interfaces\IBackgroundTask.cs" />
+    <Compile Include="Services\Interfaces\IBackgroundTaskService.cs" />
+    <Compile Include="Services\Interfaces\IFinishedBackgroundTask.cs" />
+    <Compile Include="Utils\BooleanValueInverter.cs" />
+    <Compile Include="Utils\LedToVisibilityComparer.cs" />
+    <Compile Include="Utils\ListViewBehaviors.cs" />
+    <Compile Include="Utils\ObjectToTypeConverter.cs" />
+    <Compile Include="Utils\SimTagMultiValueConverter.cs" />
+    <Compile Include="Utils\TreeViewInPlaceEditBehavior.cs" />
+    <Compile Include="Utils\TreeViewInPlaceEditBoxBehavior.cs" />
+    <Compile Include="Utils\TreeViewSelectedItemBehavior.cs" />
+    <Compile Include="ViewModels\DialogViewModels\AddNewPlcDialogViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewModels\AddNewProjectDialogViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewModels\LoadAllProjectTagsFilterDialogViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewModels\ProjectPropertiesDialogViewModel.cs" />
+    <Compile Include="ViewModels\DialogViewModels\RenameDialogViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ProjectViewModel.cs" />
+    <Compile Include="ViewModels\SimTableDirectoryViewModel.cs" />
+    <Compile Include="ViewModels\SimTableViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="ViewModels\VirtualControllerViewModel.cs" />
+    <Compile Include="Views\Controls\SimTableDirectoryView.xaml.cs">
+      <DependentUpon>SimTableDirectoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\SimTableView.xaml.cs">
+      <DependentUpon>SimTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ProjectView.xaml.cs">
+      <DependentUpon>ProjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\VirtualControllerView.xaml.cs">
+      <DependentUpon>VirtualControllerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\AddNewCustomPlcDialog.cs" />
+    <Compile Include="Views\Dialogs\AddNewCustomProjectDialog.cs" />
+    <Compile Include="Views\Dialogs\AddNewPlcDialog.xaml.cs">
+      <DependentUpon>AddNewPlcDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\AddNewProjectDialog.xaml.cs">
+      <DependentUpon>AddNewProjectDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\LoadAllProjectTagsCustomFilterDialog.cs" />
+    <Compile Include="Views\Dialogs\LoadAllProjectTagsFilterDialog.xaml.cs">
+      <DependentUpon>LoadAllProjectTagsFilterDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\ProjectPropertiesDialog.xaml.cs">
+      <DependentUpon>ProjectPropertiesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\RenameDialog.xaml.cs">
+      <DependentUpon>RenameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LedView.xaml.cs">
+      <DependentUpon>LedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="SimTableApplication.exe.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Modify.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\IconPLCSIM_ADV.ico" />
+    <Resource Include="Images\ICO_PE_CardMemory.png" />
+    <Resource Include="Images\ICO_PE_CreateNewItem.ico" />
+    <Resource Include="Images\ICO_PE_Device.ico" />
+    <Resource Include="Images\ICO_PE_Project.ico" />
+    <Resource Include="Images\ICO_PE_TbDelete.ico" />
+    <Resource Include="Images\ICO_PLCSIM_Tboff.ico" />
+    <Resource Include="Images\ICO_PLCSIM_Tbon.ico" />
+    <Resource Include="Images\ICO_PLCS_SimTable.ico" />
+    <Resource Include="Images\ICO_PVS_Properties.png" />
+    <Resource Include="Images\ICO_WEB_Close.png" />
+    <Resource Include="Images\New.png" />
+    <Resource Include="Images\Open.png" />
+    <Resource Include="Images\Save.png" />
+    <Resource Include="Images\Siemens-logo_svg.png" />
+    <Resource Include="Images\SimTableIcon.png" />
+    <Resource Include="Images\StartSimulation.png" />
+    <Resource Include="Images\StopSimulation.png" />
+    <Resource Include="IconPLCSIM_ADV.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Rename-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICO_PE_Tag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICO_PE_TbExportList.ico" />
+    <Resource Include="Images\ICO_PE_TbImportList.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add_SimTag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\About.png" />
+    <Resource Include="Images\Installed Software.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ICO_PLCS_SimTableFolder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimTableApplication.Core\SimTableApplication.Core.csproj">
+      <Project>{552270b3-c70f-4d5f-833e-dfc3183a954e}</Project>
+      <Name>SimTableApplication.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimTableApplication.PLCSIM_Advanced\SimTableApplication.PlcsimAdvanced.csproj">
+      <Project>{247dc791-3a85-46bd-95c7-f2b09afcc0dc}</Project>
+      <Name>SimTableApplication.PlcsimAdvanced</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd /D $(OutDir)
+
+rd /S /Q de
+rd /S /Q en
+rd /S /Q es
+rd /S /Q fr
+rd /S /Q it
+rd /S /Q ja
+rd /S /Q ko
+rd /S /Q ru
+rd /S /Q zh-Hant
+rd /S /Q zh-Hans
+
+del *.xml
+
+xcopy /S /I /Y $(SolutionDir)ReadMe ReadMe
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

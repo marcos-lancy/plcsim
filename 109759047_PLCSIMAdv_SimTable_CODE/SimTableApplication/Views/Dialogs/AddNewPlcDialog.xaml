@@ -1,0 +1,55 @@
+﻿<Window x:Class="SimTableApplication.Views.Dialogs.AddNewPlcDialog"
+        x:Name="CreateNewPlcDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+        xmlns:local="clr-namespace:SimTableApplication.ViewModels.DialogViewModels"
+        xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+        mc:Ignorable="d"
+        md:DialogServiceViews.IsRegistered="True"
+        Title="Add New Controller"
+        Icon="{StaticResource CreateNew}" 
+        Height="181.862" Width="273.509"
+        ResizeMode="NoResize" 
+        d:DataContext="{d:DesignInstance {x:Type local:AddNewPlcDialogViewModel}}">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger SourceObject="{Binding}" EventName="Closed">
+            <ei:CallMethodAction TargetObject="{Binding ElementName=CreateNewPlcDialog}" MethodName="Close"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+
+    <DockPanel LastChildFill="True" >
+        <StackPanel Background="#b2b2b2" Height="40" DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button IsDefault="True" Command="{Binding AddNewPlcCommand}" Content="Add" Margin="140,10,5,5" Padding="20,2,20,2" Width="80" />
+            <Button IsCancel="True"  Command="{Binding CancelCommand}" Content="Cancel" Margin="5,10,10,5" Padding="20,2,20,2" Width="80" />
+        </StackPanel>
+
+        <Grid Background="#cccccc">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Controller name: " Margin="1" />
+            <toolkit:AutoCompleteBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding AvailablePlcInstances}" SelectedItem="{Binding ControllerName, UpdateSourceTrigger=PropertyChanged}" Text="{Binding ControllerName, Mode=TwoWay}" IsTextCompletionEnabled="True" FilterMode="Contains" VerticalContentAlignment="Center" Margin="4" ToolTip="{Binding ControllerName}" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Controller type: " Margin="1"/>
+            <ComboBox Grid.Row="2" Grid.Column="1" Margin="4" SelectedValue="{Binding ControllerType, Mode=TwoWay}" ItemsSource="{Binding ControllerTypes}" SelectedIndex="0"/>
+
+
+        </Grid>
+
+    </DockPanel>
+
+
+</Window>

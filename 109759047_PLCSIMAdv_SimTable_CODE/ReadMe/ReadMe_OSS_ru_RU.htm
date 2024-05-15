@@ -1,0 +1,405 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="ru"><head>
+<title>Siemens Third-Party Software disclosure document</title>
+<meta charset="utf-8" />
+
+<style>
+td, th, tr, table
+	{font-size: 8.0pt;
+	border: 1px solid #2F4F4F;
+	border-collapse: collapse;
+	margin-left:10.4pt;
+	padding:5.4pt 5.4pt 5.4pt 5.4pt;}
+
+table.componentSummary
+	{width:95%; 
+	border: 1px solid #2F4F4F; 
+	table-layout:fixed; 
+	border-collapse: collapse;}
+
+th.componentSummary
+	{padding:1.0pt 1.0pt 1.0pt 1.0pt;}
+		
+td.componentSummary
+	{padding:1.0pt 1.0pt 1.0pt 1.0pt;}
+
+table.componentDetail
+		{font-size: 12.0pt;
+		border-style:none;}
+		
+tr.componentDetail
+		{font-size: 12.0pt;
+		border-style:none;}
+		
+td.componentDetail
+		{font-size: 12.0pt;
+		border-style:none;
+		margin-left:5.1pt;
+		padding:5.4pt 5.4pt 5.4pt 5.4pt;}
+		
+p
+	{font-family:"Arial";
+	font-size: 10.0pt;
+	margin-left:5.1pt;}
+
+p.important
+	{font-family:"Arial";
+	font-size: 12.0pt;}
+
+td.applicationCopyright
+	{width:440.0pt;
+	border:solid windowtext 1.0pt;
+	padding:5.4pt 5.4pt 5.4pt 5.4pt;}
+	
+table.licenseText
+	{border-style:none;
+	width:95%;
+	table-layout:fixed;}
+	
+tr.licenseText
+	{border-style:none;}
+	
+td.licenseText
+	{border-style:none;
+	margin-left:5.1pt;
+	padding:5.4pt 5.4pt 5.4pt 5.4pt;}
+	
+table.copyrightText
+	{width:95%;
+	table-layout:fixed;}
+	
+td.copyrightText
+	{border-style:none;
+	margin-left:0.0pt;
+	padding:5.4pt 5.4pt 5.4pt 5.4pt;}
+	
+h4
+	{font-size: 14.0pt;}
+	
+h5
+	{margin-left:8.0pt;
+	font-size: 12.0pt;}
+</style>	
+</head>
+<body><div id="application-info" style="visibility:hidden;" data-template="">
+{{name}}-{{applicationCopyrightStatement}}
+</div>
+
+<p>
+	<em>Информация для партнёров по сбыту: просим передать этот документ вашим клиентам во избежание нарушений лицензионных прав.</em>
+</p>
+<p>
+	<strong>Информация о программном обеспечении сторонних разработчиков</strong>
+</p>
+<p>
+	Настоящий продукт, настоящее решение или сервис ("Продукт") включает в себя программные компоненты сторонних разработчиков, перечисленные ниже. Это
+	компоненты программного обеспечения с открытым кодом, имеющие лицензию, признанную организацией Open Source Initiative (<a href="http://www.opensource.org/">www.opensource.org</a>), либо иную
+	лицензию согласно определению компании SIEMENS ("OSS"), и / или компоненты коммерческого либо свободно распространяемого программного обеспечения. В
+	отношении компонентов OSS соответствующие условия лицензии OSS имеют приоритет перед всеми прочими положениями, применимыми к данному Продукту. SIEMENS
+	предоставляет вам долевые права на OSS в отношении данного Продукта на безвозмездной основе.
+</p>
+<p>
+	Если SIEMENS комбинирует или связывает определённые компоненты Продукта с компонентами OSS в соответствии с определением применимой лицензии,
+	лицензированными по версии 2 или более поздней GNU LGPL, и если неограниченное использование соответствующего объектного файла не разрешено ("Модуль по
+	лицензии LGPL", причём Модуль по лицензии LGPL и компоненты, с которыми скомбинирован или связан Модуль по лицензии LGPL, далее именуются "Комбинированный
+	продукт") и выполнены соответствующие критерии лицензии LGPL, вам разрешается дополнительно (i) обрабатывать Комбинированный продукт в собственных целях и,
+	в частности, но не ограничиваясь, обрабатывать Комбинированный продукт таким образом, чтобы связать его с модифицированной версией Модуля по лицензии LGPL,
+	а также (ii) проводить обратную разработку Комбинированного продукта, но только в целях исправления ошибок вашей обработки. Право на обработку не включает
+	в себя право на дистрибуцию. Вы обязаны сохранять конфиденциальность в отношении всей информации, полученной вами в ходе обратной разработки
+	Комбинированного продукта.
+</p>
+<p>
+	Определённые лицензии OSS обязывают SIEMENS раскрывать исходный код, например, GNU General Public License, GNU Lesser General Public License и Mozilla
+	Public License. Если указанные лицензии применимы и Продукт поставлен без необходимого исходного кода, копия исходного кода может быть запрошена
+	обладателем настоящей информации в течение времени, указанного в применимой лицензии OSS, по следующему адресу:
+</p>
+<p>
+	Siemens AG
+</p>
+<p>
+	LC TE SL
+</p>
+<p>
+	Werner-von-Siemens Str. 60
+</p>
+<p>
+	91052 Erlangen
+</p>
+<p>
+	Germany
+</p>
+<p>
+	Тема: запрос исходного кода (укажите название продукта и номер версии, если применимо)
+</p>
+<p>
+	За выполнение запроса SIEMENS может взимать сбор в размере до 5 евро.
+</p>
+<p>
+	<strong>Гарантия в отношении дальнейшего применения программного обеспечения с открытым кодом:</strong>
+</p>
+<p>
+	Гарантийные обязательства SIEMENS регулируются соответствующим договором с компанией SIEMENS. Если вы модифицируете Продукт или компоненты OSS либо
+	используете их иным образом, чем указано компанией SIEMENS, гарантия аннулируется, техническая поддержка не предоставляется. Приведённые ниже лицензионные
+	условия могут включать в себя положения об ограничении ответственности, действующие в отношениях между вами и соответствующим лицензиаром. Во избежание
+	сомнений подчёркиваем, что SIEMENS не даёт гарантии от имени сторонних лицензиаров и гарантии, налагающей обязательства на сторонних лицензиаров.
+</p>
+<p>
+	<strong>В данном продукте содержится следующее программное обеспечение с открытым кодом и / или программное обеспечение сторонних разработчиков:</strong>
+</p>
+<p>
+	<strong>
+		Примите во внимание приведённые ниже лицензионные условия и положения относительно авторских прав, применимые к программному обеспечению с открытым
+		кодом и / или к другим компонентам (или их элементам):
+	</strong>
+</p>
+
+<script id="localizableStrings">
+	// Start of localizable strings (OK to change the order of the placeholders, but don't remove any)
+	var licenseConditionsHeader = "LICENSE CONDITIONS AND COPYRIGHT NOTICES";
+	var labeledComponentNameVersion = "Open Source Software: {0} - {1}";
+	var enclosedYoullFindLicensesAndCopyrights = 
+		"Enclosed you will find the {0}license conditions{1} and {2}copyright notices{3} applicable for {4} - {5}";
+	var enclosedYoullFindJustLicenses = 
+			"Enclosed you will find the {0}license conditions{1} applicable for {3}";
+			var enclosedYoullFindJustCopyrights = 
+				"Enclosed you will find the copyright notices {0}{1} applicable for {2} - {3}";
+	var licenseConditionsLabel = "License conditions:";
+	var copyrightsLabel = "Copyrights:";
+	var componentLinkToDetail = "LICENSE AND COPYRIGHT INFORMATION FOR COMPONENT {{name | upper}} - {{version}}";
+	// End of localizable strings
+</script>
+
+<!-- START OF COMPONENT-LEVEL INFORMATION AND CODE -->
+
+<!-- Component summary (table), populated using Tempo -->
+
+<table class="componentSummary">
+<thead>
+<tr><th class="componentSummary">Component</th><th class="componentSummary">Open Source Software<br />[Yes/No]</th><th class="componentSummary">Acknowledgements/Comment</th><th class="componentSummary">License conditions and copyright notices</th></tr>
+</thead>
+<tbody id="component-summary" data-template="">
+<tr data-template-for="components">
+<!-- Do not change the following two lines -->
+<td id="BlackDuckCompSummCellInsertionPoint" class="componentSummary">{{componentAndVersion}}
+<td class="componentSummary">{{openSourceYesNo}}</td><td class="componentSummary">{{effectiveCustomAcknowledgements}}</td>
+<td class="componentSummary"><a href="#compDetail_{{componentId}}">{{linkToDetailText}}</a></td></td>
+</tr>
+</tbody>
+</table>
+
+<!-- Component detail, populated using core javascript -->
+<table class="componentDetail">
+	<tbody id="component-detail">
+	<!-- Rows are filled in via javascript -->
+	</tbody>
+</table>
+
+<!-- This is the end of the page definition; the rest is code and data: -->
+
+<!-- Important: The following two lines must not be changed. Application Data will be inserted here. -->
+<script id="BlackDuckApplicationDataInsertionPoint">var applicationData = {"components":[{"componentId":"24819469","componentAndVersion":"MVVM Dialogs - 5.1.0","componentType":"Open-Source","openSourceYesNo":"YES","effectiveCopyrightStatement":"(c) 2009-2016 Mattias Kindborg\n(c) 2009-2017 MVVM Dialogs contributors\nCopyright (c) 2009-2017 MVVM Dialogs contributors\nCopyright 2015-2017 Mattias Kindborg","effectiveLicenses":[{"explanation":"\u003cdl\u003e\r\n\u003cdd\u003e\u003cfont face\u003d\"arial\" size\u003d3 color\u003d\"#FFFFFF\"\u003e\u003ca name\u003d\"distributions\"\u003e\u003c/a\u003eLicensing of Distributions\u003c/b\u003e \u003cbr\u003e\r\n\u003c/font\u003e\r\n\u003cdd\u003eLICENSING OF DISTRIBUTIONS\u003cbr\u003e\u003cbr\u003e\r\n\r\n\u003cdd\u003eFor more than two years, we have worked on improvements to the Apache License in order to solve several deficiencies with the old one. We had the following goals in mind (not in order of preference): \r\n\u003c/dl\u003e\r\n\u003col\u003e\r\n\u003cli\u003eClear\u003c/b\u003e\r\n\u003cli\u003eLots of questions get asked about \u0027can I include Tomcat/Jserv/xxx in my commercial product,\u0027 even though *careful* reading of the current license answers that. It may be better to be verbose if that cuts down on frequently asked questions. Likewise, many lawyers have commented that the original license did not define the terminology precisely. Solved in 2.0 by defining most important terms and separating the permissions into identifiable sections.\u003c/i\u003e \r\n\u003cli\u003eReusable\u003c/b\u003e\r\n\u003cli\u003eThe Apache- and ASF project-specific stuff should be separated out of the license proper so that both ASF and non-ASF projects can use the license terms unaltered. Currently, each ASF project has its own, altered, version of the main ASF 1.1 license template. Solved in 2.0 by moving project-specific stuff into the NOTICE file.\u003c/i\u003e \r\n\u003cli\u003eTrademarks\u003c/b\u003e\r\n\u003cli\u003eAvoid listing a specific set of trade marks, trade names, and service marks within the license, since that caused problems with project-specific licenses and apparent GPL-compatibility. Likewise, provide instruction on how and when Apache marks may or may not be used, since that is our most common source of licensing question. Partly solved in 2.0 by excluding any permission to use trademarks within the license itself and moving related information into the NOTICE file.\u003c/i\u003e \r\n\u003cli\u003eCompatible with other licenses\u003c/b\u003e\r\n\u003cli\u003eSince the ASF aims to create software that implements reference standards, it\u0027s in the interests of the ASF and ASF software users to aim for \u0026quot;compatibility\u0026quot; with other widely used software licenses, where \u0026quot;compatibility\u0026quot; means that our software can be used and redistributed as part of a combined work. Special preference should be given to other widely-used open source licenses, to help avoid reinvention of the wheel. Partly solved in 2.0 by modifying trademark clause and moving attribution notices into the NOTICE file.\u003c/i\u003e \r\n\u003cli\u003ePatent protection.\u003c/b\u003e\r\n\u003cli\u003eIt would be nice to have some language in the license that protected us and our users from patent-infringement suits, at the very least from contributors if not in more general ways. Solved in 2.0.\u003c/i\u003e \r\n\u003cli\u003eCovers contributions\u003c/b\u003e\r\n\u003cli\u003eHow do we ensure that contributions are made under our license and not under some other conditions? Solved in 2.0.\u003c/i\u003e \r\n\u003cli\u003eApplicable to documentation\u003c/b\u003e\r\n\u003cli\u003eMake the license clearly applicable to both software and documentation. Solved in 2.0.\u003c/i\u003e \r\n\u003cli\u003eIncludable by reference\u003c/b\u003e\r\n\u003cli\u003eWe should be able to replace all the copies of the license in our files with pointers to a license file and/or a URL. And the license should state that this can be done, and define the conditions. Solved in 2.0.\u003c/i\u003e \r\n\u003cli\u003eShort!\u003c/b\u003e\r\n\u003cli\u003eComplete license should be as short as possible, and with as little opaque legalese as possible. Less than a page is excellent; shorter still is even better. This is the trade-off -- we lost shortness in exchange for more clarity and extra patent and contribution coverage. However, the 2.0 license is still considerably shorter than comparative licenses, and the ability to license by reference makes the actual citations within source files much shorter than before.\u003c/i\u003e \r\n\u003c/ol\u003e\u003cbr\u003e\r\n\u003cfont size\u003d2\u003e\u003ci\u003eCopyright \u0026copy; 1999-2004, The Apache Software Foundation\u003c/i\u003e \u003cbr\u003e\r\n\u003c/font\u003e","id":"Apache20","name":"Apache License 2.0"}],"linkToDetailText":"LICENSE AND COPYRIGHT INFORMATION FOR COMPONENT MVVM DIALOGS - 5.1.0","detailSectionHeader":"LICENSE CONDITIONS AND COPYRIGHT NOTICES"},{"componentId":"9391752","componentAndVersion":"Microsoft Expression Blend SDK for .NET 4.5 - 3.0.40218.0","componentType":"Closed-Source (Commercial)","openSourceYesNo":"NO","effectiveLicenses":[],"effectiveCustomAcknowledgements":"The Microsoft Products are not designed or intended for use in any system or application where failure or fault of any kind of the Microsoft Product could typically be seen to lead to death or serious bodily injury of any person, or to severe physical or environmental damage (\"High Risk Use\"). High Risk Use is strictly prohibited.\n","linkToDetailText":"COPYRIGHT INFORMATION FOR COMPONENT MICROSOFT EXPRESSION BLEND SDK FOR .NET 4.5 - 3.0.40218.0","detailSectionHeader":"COPYRIGHT NOTICES"},{"componentId":"24817519","componentAndVersion":"CommonServiceLocator - 2.0.3","componentType":"Open-Source","openSourceYesNo":"YES","effectiveCopyrightStatement":"Copyright (c) Microsoft 2008\nCopyright (c) Microsoft Corporation.","effectiveLicenses":[{"id":"microsoftpubliclicensems-pl","name":"Microsoft Public License"}],"linkToDetailText":"LICENSE AND COPYRIGHT INFORMATION FOR COMPONENT COMMONSERVICELOCATOR - 2.0.3","detailSectionHeader":"LICENSE CONDITIONS AND COPYRIGHT NOTICES"},{"componentId":"22337775","componentAndVersion":"MVVM Light - 5.4.1","componentType":"Open-Source","openSourceYesNo":"YES","effectiveCopyrightStatement":"(c) 2009 GalaSoft Laurent Bugnion\n(c) Copyright Microsoft Corporation\n(c) GalaSoft Laurent Bugnion 2009-2010\n(c) GalaSoft Laurent Bugnion 2009-2011\n(c) GalaSoft Laurent Bugnion 2009-2012\n(c) GalaSoft Laurent Bugnion 2009-2018\n(c) Laurent Bugnion\n(c) Microsoft 2011\nCopyright 2009 Microsoft Corp.\nCopyright (c) Microsoft Corporation.\nCopyright (c) 1997 Microsoft Corp\nCopyright (c) 2009 - 2011 Laurent Bugnion\nCopyright (c) 2009 - 2016 Laurent Bugnion\nCopyright (c) 2009 - 2018 Laurent Bugnion\nCopyright (c) 2009 Laurent Bugnion\nCopyright (c) 2009-2011 Laurent Bugnion\nCopyright (c) 2009-2018 Laurent Bugnion\nCopyright (c) GalaSoft Laurent Bugnion 2009\nCopyright (c) GalaSoft Laurent Bugnion 2009 laurent@galasoft.ch\nCopyright (c) GalaSoft Laurent Bugnion 2009-2011\nCopyright (c) GalaSoft Laurent Bugnion 2009-2012\nCopyright (c) GalaSoft Laurent Bugnion 2009-2016\nCopyright (c) GalaSoft Laurent Bugnion 2011-2016\nCopyright (c) GalaSoft Laurent Bugnion 2012-2016\nCopyright (c) Microsoft Corporation.\nCopyright 2007-2008 Microsoft Corporation\nCopyright 2009 Microsoft Corp.\nCopyright 2009 Microsoft Corporation\nCopyright 2009-2015 Laurent Bugnion\nCopyright 2009-2016 Laurent Bugnion\nCopyright 2009-2017 Laurent Bugnion\nCopyright 2010 Microsoft Corporation\nCopyright 2010 Microsoft Corporation HorizontalAlignment Center\nCopyright 2010 Microsoft Corporation.\nCopyright 2011 Microsoft Corporation\nCopyright GalaSoft Laurent Bugnion 2009\nCopyright GalaSoft Laurent Bugnion 2009-2011\nCopyright GalaSoft Laurent Bugnion 2009-2016\nCopyright GalaSoft Laurent Bugnion 2009-2018\n","effectiveLicenses":[{"id":"isclicense","name":"ISC License"},{"id":"Microsoft_Permissive_License","name":"Microsoft Permissive License (Ms-PL)"},{"id":"mit2","name":"MIT License"}],"linkToDetailText":"LICENSE AND COPYRIGHT INFORMATION FOR COMPONENT MVVM LIGHT - 5.4.1","detailSectionHeader":"LICENSE CONDITIONS AND COPYRIGHT NOTICES"},{"componentId":"7603722","componentAndVersion":"WPF Toolkit - 3.5.50211.1","componentType":"Open-Source","openSourceYesNo":"YES","effectiveCopyrightStatement":"Copyright (c) Microsoft Corporation.  All rights reserved.\n(c) Copyright Microsoft Corporation.\nCopyright (c) Microsoft Corporation. All Rights Reserved.\nCopyright \u0026copy; Microsoft Corporation.  All rights reserved.\nCopyright (C) Microsoft Corporation.  All rights reserved.\nCopyright \u0026copy; 2010 Microsoft Corp. All rights reserved.\nCopyright \u0026copy; Microsoft 2009\n","effectiveLicenses":[{"comment":"Generated by Notices Utility for Mainline CLI","id":"Ms-PL","name":"Ms-PL","licenseText":"\u003ch1\u003eMs-PL\u003c/h1\u003e\u003cbr\u003eEND USER LICENSE AGREEMENT\u003cbr\u003eMicrosoft Public License (Ms-PL)\u003cbr\u003e\u003cbr\u003eThis license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.\u003cbr\u003e\u003cbr\u003e1. Definitions\u003cbr\u003e\u003cbr\u003eThe terms \u0026quot;reproduce,\u0026quot; \u0026quot;reproduction,\u0026quot; \u0026quot;derivative works,\u0026quot; and \u0026quot;distribution\u0026quot; have the same meaning here as under U.S. copyright law.\u003cbr\u003e\u003cbr\u003eA \u0026quot;contribution\u0026quot; is the original software, or any additions or changes to the software.\u003cbr\u003e\u003cbr\u003eA \u0026quot;contributor\u0026quot; is any person that distributes its contribution under this license.\u003cbr\u003e\u003cbr\u003e\u0026quot;Licensed patents\u0026quot; are a contributor\u0026#39;s patent claims that read directly on its contribution.\u003cbr\u003e\u003cbr\u003e2. Grant of Rights\u003cbr\u003e\u003cbr\u003e(A) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.\u003cbr\u003e\u003cbr\u003e(B) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.\u003cbr\u003e\u003cbr\u003e3. Conditions and Limitations\u003cbr\u003e\u003cbr\u003e(A) No Trademark License- This license does not grant you rights to use any contributors\u0026#39; name, logo, or trademarks.\u003cbr\u003e\u003cbr\u003e(B) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.\u003cbr\u003e\u003cbr\u003e If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.\u003cbr\u003e\u003cbr\u003e(D) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.\u003cbr\u003e\u003cbr\u003e The software is licensed \u0026quot;as-is.\u0026quot; You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.\u003cbr\u003e"}],"linkToDetailText":"LICENSE INFORMATION FOR COMPONENT WPF TOOLKIT - 3.5.50211.1","detailSectionHeader":"LICENSE CONDITIONS"}],"applicationLicenses":{"Ms-PL":"\u003ch1\u003eMs-PL\u003c/h1\u003e\u003cbr\u003eEND USER LICENSE AGREEMENT\u003cbr\u003eMicrosoft Public License (Ms-PL)\u003cbr\u003e\u003cbr\u003eThis license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.\u003cbr\u003e\u003cbr\u003e1. Definitions\u003cbr\u003e\u003cbr\u003eThe terms \u0026quot;reproduce,\u0026quot; \u0026quot;reproduction,\u0026quot; \u0026quot;derivative works,\u0026quot; and \u0026quot;distribution\u0026quot; have the same meaning here as under U.S. copyright law.\u003cbr\u003e\u003cbr\u003eA \u0026quot;contribution\u0026quot; is the original software, or any additions or changes to the software.\u003cbr\u003e\u003cbr\u003eA \u0026quot;contributor\u0026quot; is any person that distributes its contribution under this license.\u003cbr\u003e\u003cbr\u003e\u0026quot;Licensed patents\u0026quot; are a contributor\u0026#39;s patent claims that read directly on its contribution.\u003cbr\u003e\u003cbr\u003e2. Grant of Rights\u003cbr\u003e\u003cbr\u003e(A) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.\u003cbr\u003e\u003cbr\u003e(B) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.\u003cbr\u003e\u003cbr\u003e3. Conditions and Limitations\u003cbr\u003e\u003cbr\u003e(A) No Trademark License- This license does not grant you rights to use any contributors\u0026#39; name, logo, or trademarks.\u003cbr\u003e\u003cbr\u003e(B) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.\u003cbr\u003e\u003cbr\u003e If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.\u003cbr\u003e\u003cbr\u003e(D) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.\u003cbr\u003e\u003cbr\u003e The software is licensed \u0026quot;as-is.\u0026quot; You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.\u003cbr\u003e","microsoftpubliclicensems-pl":"Microsoft Public License\u003cbr\u003e \u003cbr\u003eThis license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.\u003cbr\u003e \u003cbr\u003eDefinitions\u003cbr\u003eThe terms \"reproduce,\" \"reproduction,\" \"derivative works,\" and \"distribution\" have the same meaning here as under U.S. copyright law.\u003cbr\u003eA \"contribution\" is the original software, or any additions or changes to the software.\u003cbr\u003eA \"contributor\" is any person that distributes its contribution under this license.\u003cbr\u003e\"Licensed patents\" are a contributor\u0027s patent claims that read directly on its contribution.\u003cbr\u003eGrant of Rights\u003cbr\u003eCopyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.\u003cbr\u003ePatent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.\u003cbr\u003eConditions and Limitations\u003cbr\u003eNo Trademark License- This license does not grant you rights to use any contributors\u0027 name, logo, or trademarks.\u003cbr\u003eIf you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.\u003cbr\u003eIf you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.\u003cbr\u003eIf you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.\u003cbr\u003eThe software is licensed \"as-is.\" You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.","Microsoft_Permissive_License":"\u003ch1\u003eMicrosoft Permissive License\u003c/h1\u003e\nPublished: October 18, 2005\u003cbr /\u003e\n\u003cb\u003eThis license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.\u003c/b\u003e\n\n\u003col type\u003d1\u003e\n\n\u003cli\u003eDefinitions\n\u003cul\u003e\n\u003cli\u003eThe terms \"reproduce,\" \"reproduction\" and \"distribution\" have the same meaning here as under U.S. copyright law.\u003c/li\u003e\n\u003cli\u003e\"You\" means the licensee of the software.\u003c/li\u003e\n\u003cli\u003e\"Licensed patents\" means any Microsoft patent claims which read directly on the software as distributed by Microsoft under this license. \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\n\u003cli\u003eGrant of Rights\n\u003col type\u003da\u003e\n\u003cli\u003eCopyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, Microsoft grants you a non-exclusive, worldwide, royalty-free copyright license to \u003ca name\u003d\"copyRestrictionLicense\"\u003ereproduce the software\u003c/a\u003e, \u003ca name\u003d\"modificationRestrictionLicense\"\u003eprepare derivative works of the software and distribute the software or any derivative works that you create.\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003ePatent Grant- \u003ca name\u003d\"expressPatentLicenseRestrictionLicense\"\u003eSubject to the terms of this license, including the license conditions and limitations in section 3, Microsoft grants you a non-exclusive, worldwide, royalty-free patent license under licensed patents to make, have made, use, practice, sell, and offer for sale, and/or otherwise dispose of the software or derivative works of the software.\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\n\u003cli\u003eConditions and Limitations\n\u003col type\u003da\u003e\n\u003cli\u003e\u003ca name\u003d\"promotionRestrictionLicense\"\u003eNo Trademark License- This license does not grant you any rights to use Microsoft\u0027s name, logo, or trademarks.\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca name\u003d\"patentRetaliationRestrictionLicense\"\u003eIf you begin patent litigation against Microsoft over patents that you think may apply to the software (including a cross-claim or counterclaim in a lawsuit), your license to the software ends automatically.\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eIf you distribute copies of the software or \u003ca name\u003d\"joinLevelLicense\"\u003ederivative works\u003c/a\u003e, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.\u003c/li\u003e\n\u003cli\u003e\u003ca name\u003d\"includeAddedCodeRestrictionLicense\"\u003eIf you distribute the software or derivative works in source code form you may do so only under this license\u003c/a\u003e (i.e., \u003ca name\u003d\"includeLicenseRestrictionLicense\"\u003eyou must include a complete copy of this license with your distribution\u003c/a\u003e), and if you distribute the software or derivative works in compiled or object code form you may only do so under a license that complies with this license.\u003c/li\u003e\n\u003cli\u003e\u003ca name\u003d\"disclaimerRestrictionLicense\"\u003eThe software is licensed \"as-is.\" You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e","mit2":"The MIT License\u003cbr\u003e \u003cbr\u003eCopyright (c) \u003cyear\u003e \u003ccopyright holders\u003e\u003cbr\u003e \u003cbr\u003ePermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\u003cbr\u003e \u003cbr\u003eThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\u003cbr\u003e \u003cbr\u003eTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.","isclicense":"ISC License (ISCL)\u003cbr\u003e \u003cbr\u003eCopyright (c) 4-digit year, Company or Person\u0027s Name\u003cbr\u003ePermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\u003cbr\u003e \u003cbr\u003eTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.","Apache20":"\u003cH1\u003e\u003ccenter\u003eApache License\u003cbr /\u003e\r\nVersion 2.0, January 2004\u003c/center\u003e\u003c/H1\u003e\r\n\u003cbr /\u003e\r\n\r\nhttp://www.apache.org/licenses/\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e1. Definitions\u003c/b\u003e.\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"License\" shall mean the terms and conditions for use, reproduction,\r\n      and distribution as defined by Sections 1 through 9 of this document.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Licensor\" shall mean the copyright owner or entity authorized by\r\n      the copyright owner that is granting the License.\r\n\u003c/p\u003e\r\n\r\n\u003cp\u003e\r\n      \"Legal Entity\" shall mean the union of the acting entity and all\r\n      other entities that control, are controlled by, or are under common\r\n      control with that entity. For the purposes of this definition,\r\n      \"control\" means (i) the power, direct or indirect, to cause the\r\n      direction or management of such entity, whether by contract or\r\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\r\n      outstanding shares, or (iii) beneficial ownership of such entity.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\r\n      exercising permissions granted by this License.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Source\" form shall mean the preferred form for making modifications,\r\n      including but not limited to software source code, documentation\r\n      source, and configuration files.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Object\" form shall mean any form resulting from mechanical\r\n      transformation or translation of a Source form, including but\r\n      not limited to compiled object code, generated documentation,\r\n      and conversions to other media types.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n\r\n      \"Work\" shall mean the work of authorship, whether in Source or\r\n      Object form, made available under the License, as indicated by a\r\n      copyright notice that is included in or attached to the work\r\n      (an example is provided in the Appendix below).\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Derivative Works\" shall mean any work, whether in Source or Object\r\n      form, that is based on (or derived from) the Work and for which the\r\n      editorial revisions, annotations, elaborations, or other modifications\r\n      represent, as a whole, an original work of authorship. For the purposes\r\n      of this License, Derivative Works shall not include works that remain\r\n      separable from, or merely link (or bind by name) to the interfaces of,\r\n      the Work and Derivative Works thereof.\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Contribution\" shall mean any work of authorship, including\r\n      the original version of the Work and any modifications or additions\r\n      to that Work or Derivative Works thereof, that is intentionally\r\n      submitted to Licensor for inclusion in the Work by the copyright owner\r\n      or by an individual or Legal Entity authorized to submit on behalf of\r\n      the copyright owner. For the purposes of this definition, \"submitted\"\r\n      means any form of electronic, verbal, or written communication sent\r\n      to the Licensor or its representatives, including but not limited to\r\n      communication on electronic mailing lists, source code control systems,\r\n      and issue tracking systems that are managed by, or on behalf of, the\r\n      Licensor for the purpose of discussing and improving the Work, but\r\n      excluding communication that is conspicuously marked or otherwise\r\n      designated in writing by the copyright owner as \"Not a Contribution.\"\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\r\n      on behalf of whom a Contribution has been received by Licensor and\r\n      subsequently incorporated within the Work.\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e2. Grant of Copyright License\u003c/b\u003e.\r\nSubject to the terms and conditions of\r\n      this License, each Contributor hereby grants to You a perpetual,\r\n      worldwide, non-exclusive, \u003ca name\u003d\"feeForSoftwareRestrictionLicense1\"\u003eno-charge, royalty-free, irrevocable\r\n      copyright license\u003c/a\u003e to reproduce, prepare Derivative Works of,\r\n      publicly display, publicly perform, \u003ca name\u003d\"maximumUsageLevelLicense\"\u003esublicense, and distribute the\r\n      Work and such Derivative Works in Source or Object form.\u003c/a\u003e\r\n\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e3. Grant of Patent License\u003c/b\u003e.\r\n\u003ca name\u003d\"expressPatentLicenseRestrictionLicense\"\u003eSubject to the terms and conditions of\r\n      this License, each Contributor hereby grants to You a perpetual,\r\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\r\n      (except as stated in this section) patent license to make, have made,\r\n      use, offer to sell, sell, import, and otherwise transfer the Work,\r\n      where such license applies only to those patent claims licensable\r\n      by such Contributor that are necessarily infringed by their\r\n      Contribution(s) alone or by combination of their Contribution(s)\r\n      with the Work to which such Contribution(s) was submitted.\u003c/a\u003e \u003ca name\u003d\"patentRetaliationRestrictionLicense\"\u003eIf You\r\n      institute patent litigation against any entity (including a\r\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\r\n      or a Contribution incorporated within the Work constitutes direct\r\n      or contributory patent infringement, then any patent licenses\r\n      granted to You under this License for that Work shall terminate\r\n      as of the date such litigation is filed.\u003c/a\u003e\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e4. Redistribution\u003c/b\u003e.\r\n\u003ca name\u003d\"copyRestrictionLicense\"\u003eYou may reproduce and distribute copies\u003c/a\u003e of the\r\n      Work or Derivative Works thereof in any medium, \u003ca name\u003d\"modificationRestrictionLicense\"\u003ewith or without\r\n      modifications\u003c/a\u003e, and in Source or Object form, provided that You\r\n      meet the following conditions:\r\n\u003col type\u003d\"a\"\u003e\r\n\u003cli\u003eYou must give any other recipients of the Work or\r\n          Derivative Works a copy of this License; and\r\n\u003cbr /\u003e \u003cbr /\u003e\u003c/li\u003e\r\n\r\n\u003cli\u003e\u003ca name\u003d\"sourceNoticesRestrictionLicense\"\u003eYou must cause any modified files to carry prominent notices\r\n          stating that You changed the files\u003c/a\u003e; and\r\n\u003cbr /\u003e \u003cbr /\u003e\u003c/li\u003e\r\n\r\n\u003cli\u003eYou must retain, in the Source form of any Derivative Works\r\n          that You distribute, all copyright, patent, trademark, and\r\n          attribution notices from the Source form of the Work,\r\n          excluding those notices that do not pertain to any part of\r\n          the Derivative Works; and\r\n\u003cbr /\u003e \u003cbr /\u003e\u003c/li\u003e\r\n\r\n\u003cli\u003eIf the Work includes a \"NOTICE\" text file as part of its\r\n          distribution, then any Derivative Works that You distribute must\r\n          include a readable copy of the attribution notices contained\r\n          within such NOTICE file, excluding those notices that do not\r\n          pertain to any part of the Derivative Works, in at least one\r\n          of the following places: within a NOTICE text file distributed\r\n          as part of the Derivative Works; within the Source form or\r\n          documentation, if provided along with the Derivative Works; or,\r\n          within a display generated by the Derivative Works, if and\r\n          wherever such third-party notices normally appear. The contents\r\n          of the NOTICE file are for informational purposes only and\r\n          do not modify the License. You may add Your own attribution\r\n          notices within Derivative Works that You distribute, alongside\r\n          or as an addendum to the NOTICE text from the Work, provided\r\n          that such additional attribution notices cannot be construed\r\n          as modifying the License.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n      You may add Your own copyright statement to Your modifications and\r\n      may provide additional or different license terms and conditions\r\n      for use, reproduction, or distribution of Your modifications, or\r\n      for any such Derivative Works as a whole, provided Your use,\r\n      reproduction, and distribution of the Work otherwise complies with\r\n      the conditions stated in this License.\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e5. Submission of Contributions\u003c/b\u003e.\r\nUnless You explicitly state otherwise,\r\n      any Contribution intentionally submitted for inclusion in the Work\r\n      by You to the Licensor shall be under the terms and conditions of\r\n      this License, without any additional terms or conditions.\r\n      Notwithstanding the above, nothing herein shall supersede or modify\r\n      the terms of any separate license agreement you may have executed\r\n      with Licensor regarding such Contributions.\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e6. Trademarks\u003c/b\u003e.\r\nThis License does not grant permission to use the trade\r\n      names, trademarks, service marks, or product names of the Licensor,\r\n      except as required for reasonable and customary use in describing the\r\n      origin of the Work and reproducing the content of the NOTICE file.\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e7. Disclaimer of Warranty\u003c/b\u003e.\r\n\u003ca name\u003d\"disclaimerRestrictionLicense\"\u003eUnless required by applicable law or\r\n      agreed to in writing, Licensor provides the Work (and each\r\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\r\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\r\n      implied, including, without limitation, any warranties or conditions\r\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\r\n      PARTICULAR PURPOSE. You are solely responsible for determining the\r\n      appropriateness of using or redistributing the Work and assume any\r\n      risks associated with Your exercise of permissions under this License.\u003c/a\u003e\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e\u003ca name\u003d\"excludeDamagesRestrictionLicense\"\u003e8. Limitation of Liability\u003c/b\u003e.\r\nIn no event and under no legal theory,\r\n      whether in tort (including negligence), contract, or otherwise,\r\n      unless required by applicable law (such as deliberate and grossly\r\n      negligent acts) or agreed to in writing, shall any Contributor be\r\n      liable to You for damages, including any direct, indirect, special,\r\n      incidental, or consequential damages of any character arising as a\r\n      result of this License or out of the use or inability to use the\r\n      Work (including but not limited to damages for loss of goodwill,\r\n      work stoppage, computer failure or malfunction, or any and all\r\n      other commercial damages or losses), even if such Contributor\r\n      has been advised of the possibility of such damages.\u003c/a\u003e\r\n\r\n\u003c/p\u003e\r\n\u003cp\u003e\u003cb\u003e9. Accepting Warranty or Additional Liability\u003c/b\u003e.\r\n\u003ca name\u003d\"indemnificationRestrictionLicense\"\u003eWhile redistributing\r\n      the Work or Derivative Works thereof, You may choose to offer,\r\n      and charge a fee for, acceptance of support, warranty, indemnity,\r\n      or other liability obligations and/or rights consistent with this\r\n      License. However, in accepting such obligations, You may act only\r\n      on Your own behalf and on Your sole responsibility, not on behalf\r\n      of any other Contributor, and only if You agree to indemnify,\r\n      defend, and hold each Contributor harmless for any liability\r\n      incurred by, or claims asserted against, such Contributor by reason\r\n      of your accepting any such warranty or additional liability.\u003c/a\u003e\r\n\u003c/p\u003e\r\n\u003cp\u003e\r\nEND OF TERMS AND CONDITIONS\r\n\u003c/p\u003e\r\n                 \r\n\u003ch4\u003e\r\n   APPENDIX: How to apply the Apache License to your work\r\n\u003c/h4\u003e\r\n\r\n\u003cp\u003e\r\n      To apply the Apache License to your work, attach the following\r\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\r\n      replaced with your own identifying information. (Don\u0027t include\r\n      the brackets!)  The text should be enclosed in the appropriate\r\n      comment syntax for the file format. We also recommend that a\r\n      file or class name and description of purpose be included on the\r\n      same \"printed page\" as the copyright notice for easier\r\n      identification within third-party archives.\r\n\r\n\u003c/p\u003e\r\n\u003cblockquote\u003e\r\n   Copyright [yyyy] [name of copyright owner]\r\n\r\n   Licensed under the Apache License, Version 2.0 (the \u0026quot;License\u0026quot;);\r\n   you may not use this file except in compliance with the License.\r\n   You may obtain a copy of the License at\r\n\r\n       http://www.apache.org/licenses/LICENSE-2.0\r\n\r\n   Unless required by applicable law or agreed to in writing, software\r\n   distributed under the License is distributed on an \u0026quot;AS IS\u0026quot; BASIS,\r\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n   See the License for the specific language governing permissions and\r\n   limitations under the License.\u003c/blockquote\u003e"},"id":"24813994","name":"PLCSIM Advanced SimulationTable","version":"1.0.0.0","locked":false,"ownerId":"24145893"}</script>
+
+<!-- Important: The following two lines must not be changed. Black Duck javascript code will be inserted here. -->
+<script id="BlackDuckJavaScriptInsertionPoint">	<!-- For Tempo: Embed tempo.min.js -->
+	eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('B R(a,b,c){\'2o 2p\';6.1H=a;6.3D=b;6.2q=c;v 6}R.11={1u:\'3E\',2r:\'3F\',2s:\'3G\',22:\'3H\',2t:\'3I\',2u:\'3J\'};C 2v=(B(n){\'2o 2p\';C o=/(\\d+)(\\d{3})/;C q;C u={1I:B(a){C b=\'(\';O(C c 1o a){y(a.1i(c)){y(b.F>1){b+=\'|\'}b+=c}}v b+\')[\\\\.]?\'+\'(?!\\\\w)\'},1j:B(a,b,c){1J(a.F<c){a=b+a}v a},1p:B(a){v a.T(/^\\s*([\\S\\s]*?)\\s*$/,\'$1\')},1v:B(a,b){v(a.19(b)===0)},23:B(a){y(a!==J&&a!==I&&a.U!==I){O(C i=a.U.F-1;i>=0;i--){y(a.U[i]!==I&&a.U[i].V!==I&&(a.U[i].V(\'N-Q\')!==J||a.U[i].V(\'N-Q-O\')!==J)){a.U[i].1K.3K(a.U[i])}}}},2w:B(a){C p=a.1K;1J(p){y(6.17(p,\'N-Q\')||6.17(p,\'N-Q-O\')){v X}p=p.1K}v 1k},2x:B(a,b){v a.1L()===b.1L()},2y:B(a,b){y(3L.3M.19("3N")>-1&&u.2x(a.3O,\'3P\')){C c=q.16.2z(\'3Q\');c.1a=\'<2A><2B>\'+b+\'</2B></2A>\';C d=3;1J(d--){c=c.2C}c.2D(\'N-Q\',\'\');v c}K{a.1a=b;v a}},1b:B(a){y(1c(a)==="1w"){y(a===J){v"J"}y(a.1q===([]).1q){v"1M"}y(a.1q===(P 2E()).1q){v"24"}y(a.1q===(P 1d()).1q){v"3R"}y(1c 2F==="1w"?a 2G 2F:a&&1c a==="1w"&&a.3S===1&&1c a.3T==="25"){v\'2q\'}y(1c 2H!==\'I\'&&a 2G 2H){v\'2I\'}v"1w"}v 1c(a)},17:B(a,b){y(a!==I){y(a.2J!==I){v a.2J(b)}K y(a.V!==I){v a.V(b)!==J}}v 1k},1r:B(a,b){y(a!==I){a.2D(b,\'\');y(a.1N){a.1N(b)}}},2K:B(a,b){C c={};O(C d 1o a){y(a.1i(d)){c[d]=a[d]}}O(C e 1o b){y(b.1i(e)){c[e]=b[e]}}v c},1e:B(a,b){y(a!==I&&a.F>0){O(C i=0;i<a.F;i++){y(b.1H===a[i].1H){a[i].14(b)}}}},L:B(a){y(u.1b(a)===\'25\'){y(a===\'*\'){a=q.16.2L(\'3U\')[0]}K{a=q.16.26(a)}}K y(u.1b(a)===\'2I\'&&a.F>0){a=a[0]}v a},2M:B(a,b){y(!3V.27.19){O(C i=0;i<6.F;i++){y(6[i]===b){v X}}v 1k}K{v a.19(b)>-1}}};B 1l(a,b){6.2N=a;6.1x=J;6.1y={};6.L=J;6.1O=b!==I?b:J;6.1P=X;6.28=\'\\\\{\\\\{\';6.29=\'\\\\}\\\\}\';6.1z=\'\\\\{%\';6.1A=\'%\\\\}\';6.2a=1k;6.1m={};y(1c a!==\'I\'){O(C c 1o a){y(c===\'3W\'){6.28=a[c].W(0,a[c].F/2);6.29=a[c].W(a[c].F/2)}K y(c===\'3X\'){6.1z=a[c].W(0,a[c].F/2);6.1A=a[c].W(a[c].F/2)}K y(1c 6[c]!==\'I\'){6[c]=a[c]}}}v 6}1l.27={2O:B(b,c){B 1Q(a){v a.2P?a.2P.16.3Y.1a:a.2Q?a.2Q.2b.1a:a.16.2b.1a}y(q.16.26(b)!==J){c(1Q(q.16.26(b)))}K{C d=q.16.2z(\'3Z\');d.40=b;d.Z=b;d.18.41=0;d.18.42=0;d.43=b;y(d.2R){d.2R(\'2S\',B(){c(1Q(d))})}K{d.2S=B(){c(1Q(d))}}q.16.2b.1R(d)}},2T:B(b,c,d,e){v B(a){u.1r(b,\'N-Q-1s\');b.1a=a;c.1B(d,e)}},1B:B(a,b){6.L=a;C c=a.2L(\'*\');C d=X;O(C i=0;i<c.F;i++){y(d===X&&b!==I&&u.17(c[i],\'N-Q-1s\')){C e=c[i];y(e.V(\'N-Q-1s\').F>0){C f=6;d=1k;6.2O(e.V(\'N-Q-1s\'),6.2T(e,f,a,b))}}K y(u.17(c[i],\'N-Q-44\')){c[i].18.1S=\'45\'}}y(d){C g={};O(C s=0;s<c.F;s++){y(c[s].V!==I){y(u.17(c[s],\'N-Q-O\')&&c[s].V(\'N-Q-O\').F>0&&6.1O===c[s].V(\'N-Q-O\')&&!g[6.1O]){6.1T(c[s]);g[6.1O]=X}K y(u.17(c[s],\'N-Q\')&&!u.2w(c[s])){6.1T(c[s])}}}y(6.1x===J){6.1T(a)}u.23(6.L);y(b!==I){b(6)}}},1T:B(b){C c=b.2c(X);y(c.18.1N){c.18.1N(\'1S\')}K y(c.18.2U){c.18.2U(\'1S\')}K{c.18.1S=\'46\'}6.L=b.1K;C d=1k;O(C a=0;a<c.1m.F;a++){C e=c.1m[a];y(u.1v(e.Z,\'N-y-\')){C f;y(e.15===\'\'){f=X}K{f=\'\\\'\'+e.15+\'\\\'\'}6.1y[e.Z.W(8,e.Z.F)+\'==\'+f]=c;u.1r(c,e.Z);d=X}K y(e.Z===\'N-47\'){6.1y[e.15+\'!==I\']=c;u.1r(c,e.Z);d=X}K y(e.Z===\'N-48-49\'){6.2a=X}K y(!u.1v(e.Z,\'N-Q\')&&u.1v(e.Z,\'N-\')){6.1m[e.Z.W(5,e.Z.F)]=e.15}}y(!d){6.1x=c}},2V:B(i){O(C a 1o 6.1y){y(1f(\'i.\'+a)){v 6.1y[a].2c(X)}}y(6.1x){v 6.1x.2c(X)}}};B 1t(a){6.G=a;6.14=[];6.1C=1k;6.2W=P 1d(6.G.28+\'[ ]?([A-2X-2d-9$\\\\.2Y\\\\[\\\\]]*?)([ ]?\\\\|[ ]?.*?)?[ ]?\'+6.G.29,\'g\');6.2Z=P 1d(6.G.1z+\'[ ]?([\\\\s\\\\S]*?)( [\\\\s\\\\S]*?)?[ ]?\'+6.G.1A+\'(([\\\\s\\\\S]*?)(?=\'+6.G.1z+\'[ ]?4a\\\\1[ ]?\'+6.G.1A+\'))?\',\'g\');6.30=P 1d(\'\\\\|[ ]?(?=\'+u.1I(6.1U)+\')\',\'g\');6.1V=J;v 6}1t.27={4b:B(a,b){6.14.31({\'1H\':a,\'14\':b});v 6},2e:B(a,b,i,t){C c=J;y(u.1v(b,\'32.\')){v 1f(\'t.\'+b.W(7,b.F))}y(b===\'.\'){c=1f(\'i\')}K y(b===\'6\'||b.1W(/6[\\\\[\\\\.]/)!==J){c=1f(\'i\'+b.W(4,b.F))}K y(u.1b(i)===\'1M\'){c=1f(\'i\'+b)}K{c=1f(\'i.\'+b)}v c},2f:B(j,k,i,l){C m=6;v l.T(6.2W,B(a,b,c){1D{C d=j.2e(j,b,i,k);y(c!==I&&c!==\'\'){C e=u.1p(u.1p(c).W(1)).1n(m.30);O(C p=0;p<e.F;p++){C g=u.1p(e[p]);C h=[];y(g.19(\' \')>-1){C f=g.W(g.19(\' \')).T(/^[ \']*|[ \']*$/g,\'\');h=f.1n(/(?:[\\\'"])[ ]?,[ ]?(?:[\\\'"])/);g=g.W(0,g.19(\' \'))}d=j.1U[g](d,h)}}y(d!==I){y(m.G.1P){d=m.1U.1P(d,{})}v d}}1E(1g){m.1F.1G(m,1g)}v\'\'})},33:B(e,f,i,g,h){v g.T(h,B(a,b,c){1D{C d=e.2e(e,b,i,f);y(d!==I){y(u.1b(d)===\'25\'){v\'\\\'\'+d+\'\\\'\'}K{v d}}}1E(1g){34.1F.1G(34,1g)}v I})},35:B(d,e,f){v f.T(/(\\b[A-2d-9]+?)(?:="[^"\']*?"[^>]*?)N-\\1="(.*?)"/g,B(a,b,c){y(c!==\'\'){v b+\'="\'+c+\'"\'}v a})},2g:B(f,g,h){v h.T(6.2Z,B(a,b,c,d){y(f.2h.1i(b)){c=c.W(c.19(\' \')).T(/^[ ]*|[ ]*$/g,\'\');C e=c.1n(/(?:[\'"])[ ]?,[ ]?(?:[\'"])/);v f.2h[b](f,g,a,e,d)}K{v\'\'}})},1X:B(a){6.1C=X;y(a===I){a=P R(R.11.1u,I,I)}u.1e(6.14,a);v 6},36:B(i,c){C d=6;v B(a){C r=P 1t(a);C b=J;y(i.1i(c.1n(\'.\')[0])){b=1f(\'i.\'+c);y(b){1D{y(u.1b(b)===\'1M\'){O(C s=0;s<b.F;s++){b[s].2i=B(){v i}()}}K{b.2i=B(){v i}()}}1E(1g){d.1F.1G(d,1g)}}}r.37(b)}},38:B(b,c,i,d){C e=P 1d(\'(?:4c[\\\\.]?)((32|\\\\[|\'+u.1I(i)+\'|6)([A-2X-2d-9$\\\\.2Y\\\\[\\\\]]+)?)\',\'g\');C f=b.G.2V(i);C g=u.2K(c,b.G.1m);y(u.17(f,\'N-Q-O\')){u.1r(f,\'N-Q-O\')}y(u.17(f,\'N-Q-1s\')){u.1r(f,\'N-Q-1s\')}y(f&&i){u.1e(6.14,P R(R.11.2r,i,f));C h=f.1a.1W(/N-Q-O="([^"]+?)"/g);y(h){O(C p=0;p<h.F;p++){C j=h[p].1W(/N-Q-O="([^"]+?)"/);y(j&&j[1]){C t=P 1l(b.G.2N,j[1]);1D{t.1B(f,6.36(i,j[1]))}1E(1g){6.1F.1G(6,1g)}}}}O(C a=0;a<f.1m.F;a++){C k=f.1m[a];y(k!==J&&k.4d&&k.15!==J&&k.15.F>0&&k.Z.1W(/18|N-Q.*/)===J){k.15=6.2g(6,i,k.15);k.15=6.2f(6,g,i,k.15)}}C l=f.1a.T(/%39%39/g,\'{{\').T(/%3a%3a/g,\'}}\');l=6.2g(6,i,l);l=6.2f(6,g,i,l);l=6.33(6,g,i,l,e);l=6.35(6,i,l);d.1R(u.2y(f,l));u.1e(6.14,P R(R.11.2s,i,f))}},2j:B(a){y(a){C b={};C c=q.16.4e();y(u.1b(a)===\'1w\'){y(6.G.2a){C d=[];O(C e 1o a){y(a.1i(e)&&e!==\'2i\'){C f={};f.4f=e;f.15=a[e];d.31(f)}}a=d}K{a=[a]}}O(C i=0;i<a.F;i++){b.4g=i;6.38(6,b,a[i],c)}v c}v J},4h:B(a){y(a!==I){6.G.L=u.L(a)}v 6},37:B(a){y(!6.1C){6.1X(P R(R.11.1u,a,6.G.L))}6.3b();6.2k(a);v 6},2k:B(a){y(!6.1C){6.1X(P R(R.11.1u,a,6.G.L))}C b=6.2j(a);y(b!==J&&6.G.L!==J){y(b!==J){C c=J;O(C i=6.G.L.U.F;i>=0;i--){y(6.G.L.U[i]!==I&&6.G.L.U[i].V!==I&&6.G.L.U[i].V(\'N-4i-Q\')!==J){c=6.G.L.U[i]}}y(c===J){c=6.G.L.2C}y(c!==J){6.G.L.3c(b,c)}K{6.G.L.1R(b)}}}u.1e(6.14,P R(R.11.22,a,6.G.L));v 6},3d:B(a){y(!6.1C){6.1X(P R(R.11.1u,a,6.G.L))}C b=6.2j(a);y(b!==J){C c=J;O(C i=0;i<6.G.L.U.F;i++){y(6.G.L.U[i]!==I&&6.G.L.U[i].V!==I&&6.G.L.U[i].V(\'N-3e-Q\')!==J){c=6.G.L.U[i]}}y(c===J){c=6.G.L.4j}y(c!==J){y(c.3f!==J&&c.V&&c.V(\'N-3e-Q\')!==J){c=c.3f}6.G.L.3c(b,c)}K{6.G.L.1R(b)}}u.1e(6.14,P R(R.11.22,a,6.G.L));v 6},4k:B(a){6.1V=a;v 6},1F:B(a){y(6.1V!==J){6.1V.1G(6,a)}},3b:B(){u.1e(6.14,P R(R.11.2t,{},6.G.L));u.23(6.G.L);u.1e(6.14,P R(R.11.2u,{},6.G.L))},2h:{\'y\':B(b,i,c,d,e){C f=u.1I(i);C g=d[0].T(/&3g;/g,\'&\').T(/&3h;/g,\'>\').T(/&3i;/g,\'<\');g=g.T(P 1d(f,\'4l\'),B(a){v\'i.\'+a});C h=P 1d(b.G.1z+\'[ ]?K[ ]?\'+b.G.1A,\'g\');C j=e.1n(h);y(1f(g)){v j[0]}K y(j.F>1){v j[1]}v\'\'}},1U:{\'1P\':B(a,b){v a.2l().T(/[&<>]/g,B(c){v{\'&\':\'&3g;\',\'<\':\'&3i;\',\'>\':\'&3h;\'}[c]||c})},\'3j\':B(a,b){v 3j(a.2l())},\'3k\':B(a,b){v 3k(a.2l())},\'4m\':B(a,b){y(a!==I){C c=0;C d=\'...\';y(b.F>0){c=3l(b[0],10)}y(b.F>1){d=b[1]}y(a.F>c-3){v a.3m(0,c-3)+d}v a}},\'4n\':B(a,b){y(a!==I){y(b.F===1){a=4o(a+\'\').1h(3l(b[0],10))}C x=(a+\'\').1n(\'.\');C c=x[0];C d=x.F>1?\'.\'+x[1]:\'\';1J(o.3n(c)){c=c.T(o,\'$1\'+\',\'+\'$2\')}v c+d}},\'4p\':B(a,b){v a.3o()},\'4q\':B(a,b){v a.1L()},\'4r\':B(a,b){C c=[];y(b!==I&&b.F==1){c=b[0].1n(\' \')}v a.T(/\\w[a-z]\\S*/g,B(m,i){y(c.F===0||!(u.2M(c,m)&&i>0)){v m.4s(0).3o()+m.3m(1).1L()}v m})},\'1p\':B(a,b){v u.1p(a)},\'T\':B(a,b){y(a!==I&&b.F===2){v a.T(P 1d(b[0],\'g\'),b[1])}v a},\'2k\':B(a,b){y(a!==I&&b.F===1){v a+\'\'+b[0]}v a},\'3d\':B(a,b){y(a!==I&&b.F===1){v b[0]+\'\'+a}v a},\'3p\':B(a,b){y(b.F===1&&a!==I&&u.1b(a)===\'1M\'){v a.3p(b[0])}v a},\'4t\':B(a,b){y(a!==I&&a!==J){v a}y(b.F===1){v b[0]}v a},\'24\':B(d,e){y(d!==I&&e.F>=1&&e.F<=2){C f=P 2E(d);C g=e[0];C h=(e.F===2&&e[1]===\'4u\');y(g===\'4v\'){v f.4w()}K y(g===\'4x\'){v f.4y()}K y(g===\'24\'){v f.4z()}K y(g===\'4A\'){v f.4B()}K{C i=[\'4C\',\'4D\',\'4E\',\'4F\',\'4G\',\'4H\',\'4I\',\'4J\',\'4K\',\'4L\',\'4M\',\'4N\'];C j=[\'4O\',\'4P\',\'4Q\',\'4R\',\'4S\',\'4T\',\'4U\'];C k={\'4V\':B(a){v(h?a.3q():a.3r())},\'4W\':B(a){v(h?a.3q():a.3r()).1h().W(2)},\'4X\':B(a){v i[(h?a.1Y():a.1Z())]},\'4Y\':B(a){v i[(h?a.1Y():a.1Z())].W(0,3)},\'4Z\':B(a){v u.1j(((h?a.1Y():a.1Z())+1).1h(),\'0\',2)},\'M\':B(a){v(h?a.1Y():a.1Z())+1},\'50\':B(a){v u.1j((h?a.3s():a.3t()).1h(),\'0\',2)},\'D\':B(a){v(h?a.3s():a.3t())},\'51\':B(a){v j[(h?a.2m():a.2n())]},\'52\':B(a){v j[(h?a.2m():a.2n())].W(0,3)},\'E\':B(a){v(h?a.2m():a.2n())},\'53\':B(a){v u.1j((h?a.20():a.21()).1h(),\'0\',2)},\'H\':B(a){v(h?a.20():a.21())},\'h\':B(a){C b=(h?a.20():a.21());v b<13?(b===0?12:b):b-12},\'54\':B(a){v u.1j((h?a.3u():a.3v()).1h(),\'0\',2)},\'m\':B(a){v(h?a.3u():a.3v())},\'55\':B(a){v u.1j((h?a.3w():a.3x()).1h(),\'0\',2)},\'s\':B(a){v(h?a.3w():a.3x())},\'56\':B(a){v u.1j((h?a.3y():a.3z()).1h(),\'0\',3)},\'S\':B(a){v(h?a.3y():a.3z())},\'a\':B(a){v(h?a.20():a.21())<12?\'57\':\'58\'}};g=g.T(/(\\\\)?(Y{2,4}|M{1,4}|D{1,2}|E{1,4}|H{1,2}|h|m{1,2}|s{1,2}|S{1,3}|a)/g,B(a,b,c){y(!b){y(k.1i(c)){v k[c](f)}}v c});v g}}v\'\'}}};n.3A=B(a){q=a;v 6};n.59=B(b,c,d){b=u.L(b);C e=P 1l(c);y(d!==I){e.1B(b,B(a){d(P 1t(a))})}K{e.1B(b);v P 1t(e)}};n.3B={\'G\':1l,\'3C\':u};n.3n={\'3C\':u,\'G\':P 1l({}),\'5a\':P 1t(P 1l({}))};1D{n.3A(5b)}1E(e){3B.5c=n}v n})(2v||{});',62,323,'||||||this|||||||||||||||||||||||||return|||if|||function|var|||length|templates||undefined|null|else|container||data|for|new|template|TempoEvent||replace|childNodes|getAttribute|substring|true||name||Types|||listener|value|document|hasAttr|style|indexOf|innerHTML|typeOf|typeof|RegExp|notify|eval|err|toFixed|hasOwnProperty|pad|false|Templates|attributes|split|in|trim|constructor|removeAttr|file|Renderer|RENDER_STARTING|startsWith|object|defaultTemplate|namedTemplates|tag_brace_left|tag_brace_right|parse|started|try|catch|_onError|call|type|memberRegex|while|parentNode|toLowerCase|array|removeAttribute|nestedItem|escape|contents|appendChild|display|createTemplate|filters|errorHandler|match|starting|getUTCMonth|getMonth|getUTCHours|getHours|RENDER_COMPLETE|clearContainer|date|string|getElementById|prototype|var_brace_left|var_brace_right|dataIsMap|body|cloneNode|z0|_getValue|_replaceVariables|_applyTags|tags|_parent|_createFragment|append|toString|getUTCDay|getDay|use|strict|element|ITEM_RENDER_STARTING|ITEM_RENDER_COMPLETE|BEFORE_CLEAR|AFTER_CLEAR|Tempo|isNested|equalsIgnoreCase|getElement|createElement|table|tbody|lastChild|setAttribute|Date|HTMLElement|instanceof|jQuery|jquery|hasAttribute|merge|getElementsByTagName|arrayContains|params|load|contentWindow|contentDocument|attachEvent|onload|_insertTemplate|removeProperty|templateFor|varRegex|Za|_|tagRegex|filterSplitter|push|_tempo|_replaceObjects|self|_applyAttributeSetters|_renderNestedItem|render|renderItem|7B|7D|clear|insertBefore|prepend|before|nextSibling|amp|gt|lt|encodeURI|decodeURI|parseInt|substr|test|toUpperCase|join|getUTCFullYear|getFullYear|getUTCDate|getDate|getUTCMinutes|getMinutes|getUTCSeconds|getSeconds|getUTCMilliseconds|getMilliseconds|init|exports|utils|item|render_starting|item_render_starting|item_render_complete|render_complete|before_clear|after_clear|removeChild|navigator|appVersion|MSIE|tagName|tr|div|regex|nodeType|nodeName|html|Array|var_braces|tag_braces|documentElement|iframe|id|height|width|src|fallback|none|block|has|from|map|end|when|__|specified|createDocumentFragment|key|index|into|after|firstChild|errors|gi|truncate|format|parseFloat|upper|lower|titlecase|charAt|default|UTC|localedate|toLocaleDateString|localetime|toLocaleTimeString|toDateString|time|toTimeString|January|February|March|April|May|June|July|August|September|October|November|December|Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|YYYY|YY|MMMM|MMM|MM|DD|EEEE|EEE|HH|mm|ss|SSS|AM|PM|prepare|renderer|window|tempo'.split('|'),0,{}))
+
+
+	var componentDetailsRowIndex = 0;
+
+	
+	window.onload = function () {
+		console.log("Starting window.onload");
+		
+		/* Populate the simple parts of the page using Tempo */
+		console.log("Populating application-info");
+		Tempo.prepare('application-info').render(applicationData);
+		console.log("Populating component-summary");
+		Tempo.prepare('component-summary').render(applicationData);
+		
+		
+		
+		/* Define a sprintf-like format function, if not already defined */
+		console.log("About to test for format function");
+		if (!String.prototype.format) {
+			console.log("Defining sprintf function");
+		  String.prototype.format = function() {
+		    var args = arguments;
+		    return this.replace(/{(\d+)}/g, function(match, number) { 
+		      return typeof args[number] != 'undefined'
+		        ? args[number]
+		        : match
+		      ;
+		    });
+		  };
+		}
+		
+		
+	
+		/* 
+		 * The component details are more complicated because for each component license, we need
+		 * to lookup the license text in a separate map (using the license id). This lookup requires
+		 * javascript. The javascript below fills in the rows of the component-details table.
+		 */
+		var table = document.getElementById("component-detail");
+		table.innerHTML = "";
+		for (var componentIndex = 0; componentIndex < applicationData.components.length; componentIndex++) {
+			addComponentDetailRow(table, applicationData.components[componentIndex]);
+		}
+	}
+	
+	/**
+	 * Add a component (row) to the component details table, which includes the license text and copyrights tables
+	 * within it.
+	 *
+	 * @param component
+	 */
+	function addComponentDetailRow(table, component) {
+	
+		if ( (isUndefinedOrEmpty(component.effectiveLicenses)) && (isUndefinedOrEmpty(component.effectiveCopyrightStatement))) {
+			return;
+		}
+		
+		/* Set the class on the table so it picks up the right style settings */
+		table.className = "componentDetail";
+		
+		/* Create the row */
+		var row = table.insertRow(componentDetailsRowIndex++);
+		row.className = "componentDetail";
+		
+		var cellContents = constructComponentDetailCell(
+			component.componentAndVersion, 
+			component.componentId, 
+			component.effectiveLicenses, 
+			component.effectiveCopyrightStatement,
+			component.componentType,
+			component.detailSectionHeader);
+		var cell = row.insertCell(0);
+		cell.className = "componentDetail";
+		cell.innerHTML = cellContents;
+	}
+	
+	/**
+	 * Return the value of the given variable, or a non-breaking-space if it
+	 * is undefined. This ensures there is something to display, even if it
+	 * is invisible, which can be better than seeing "undefined" on the page.
+	 */
+	function getValueOrSpace(stringVariable) {
+		var stringVariableWithValue;
+		if (typeof stringVariable != 'undefined') {
+			stringVariableWithValue = stringVariable;
+		} else {
+			stringVariableWithValue = "&nbsp;";
+		}
+		return stringVariableWithValue;
+	}
+	
+	function isUndefinedOrEmpty(stringVariable) {
+		console.log("isUndefinedOrEmpty() testing: " + stringVariable);
+		if (!stringVariable) {
+			return true;
+		}
+		if (/^\s*$/.test(stringVariable)) {
+			return true;
+		}
+		if ((typeof stringVariable == 'undefined') || (stringVariable.length == 0)) {
+			return true;
+		}
+	}
+	
+	/**
+	 * Construct component details table cell, which includes the license text and copyrights tables.
+	 */
+	function constructComponentDetailCell(componentNameVersion, componentId, componentLicenseSet, effectiveCopyrightStatement, componentType,
+			detailSectionHeader) {
+		console.log("Entering constructComponentDetailCell for " + componentNameVersion);
+
+		var componentRowTextComponentHeaderTitle = "<h4><br /><a name='compDetail_" + componentId + "'>" + detailSectionHeader + "</a></h4>";
+		var componentRowTextComponentHeaderComponent = "<h4>" + labeledComponentNameVersion.format(componentType, componentNameVersion) + "</h4>";
+		
+		var componentRowTextComponentHeaderEnclosed;
+		console.log("componentType: '" + componentType + "'");
+		
+		if  (isUndefinedOrEmpty(componentLicenseSet)) {
+			// There is only a copyright section
+			console.log("Omitting license text section");
+			componentRowTextComponentHeaderEnclosed = "<p class='important'>" + enclosedYoullFindJustCopyrights.format("<a href='#compCopyrightText_" + componentId + "'>", "</a>", 
+				componentType, componentNameVersion) + "</p><br />";
+		} else if (!isUndefinedOrEmpty(effectiveCopyrightStatement)) {
+			// There are BOTH license and copyright sections
+			componentRowTextComponentHeaderEnclosed = "<p class='important'>" + enclosedYoullFindLicensesAndCopyrights.format("<a href='#compLicenseText_" + componentId + "'>", "</a>",
+				"<a href='#compCopyrightText_" + componentId + "'>", "</a>", componentType, componentNameVersion) + "</p><br />";
+		} else {
+			// There is only a license section
+			componentRowTextComponentHeaderEnclosed = "<p class='important'>" + enclosedYoullFindJustLicenses.format("<a href='#compLicenseText_" + componentId + "'>", "</a>",
+				componentType, componentNameVersion) + "</p><br />";
+		}
+		
+		var componentRowTextComponentHeader = componentRowTextComponentHeaderTitle + componentRowTextComponentHeaderComponent + componentRowTextComponentHeaderEnclosed;
+	
+		var componentRowTextLicenseText = constructLicenseTableWithHeader(componentId, componentLicenseSet, componentType);
+
+		var componentRowTextCopyrightText = constructCopyrightTableWithHeader(componentId, effectiveCopyrightStatement);
+			
+		var componentDetailCellText = componentRowTextComponentHeader + componentRowTextLicenseText + componentRowTextCopyrightText;
+		return componentDetailCellText;
+	}
+	
+	/**
+	 * Construct license text table
+	 */
+	function constructLicenseTableWithHeader(componentId, componentLicenseSet, componentType) {
+		console.log("constructLicenseTable: componentType: " + componentType);
+		if  (isUndefinedOrEmpty(componentLicenseSet)) {
+			console.log("ReportContent includes no licenses");
+			return "<br>";
+		}
+		var tableHtmlOpen = "<table class='licenseText'>";
+		var tableHtmlRows = "";
+		
+		for (var licenseIndex = 0; licenseIndex < componentLicenseSet.length; licenseIndex++) {
+			var licenseKey, licenseCopyrightText, licenseText;
+			licenseKey           = componentLicenseSet[licenseIndex].id;
+				
+			console.log("Including license key: '" + licenseKey + "'");
+			if(componentLicenseSet[licenseIndex].hasOwnProperty("licenseText")){
+				licenseText = componentLicenseSet[licenseIndex].licenseText;
+			} else {
+				licenseText = applicationData.applicationLicenses[licenseKey];
+			}
+			
+			if (licenseKey != ""){
+				tableHtmlRows += "<tr><td>" + licenseText + "</td></tr>";
+			}
+		}
+		
+		var tableHtmlClose = "</table>";
+		var licenseTableHtml = tableHtmlOpen + tableHtmlRows + tableHtmlClose;
+
+		return "<h5><a name='compLicenseText_" + componentId + "'>" + licenseConditionsLabel + "</a></h5><br />" + licenseTableHtml + "<br/>";
+	}
+
+	/**
+	 * Construct Copyright text table
+	 */
+	function constructCopyrightTableWithHeader(componentId, effectiveCopyrightStatement) {
+		if (isUndefinedOrEmpty(effectiveCopyrightStatement)) {
+			return "<br>";
+		}
+		var breakedComponentCopyrightStatement = effectiveCopyrightStatement.replace(/\n/g, '<br/>');
+		var tableHtml = "<table class='copyrightText'><tr><td class='copyrightText'>" + breakedComponentCopyrightStatement + "</td></tr></table>";
+		
+		return "<br /><h5><a name='compCopyrightText_" + componentId + "'>" + copyrightsLabel + "</a></h5><br />" + tableHtml + "<br/>";
+	}
+	
+	
+	</script>
+
+<!-- END OF COMPONENT-LEVEL INFORMATION AND CODE -->
+
+
+ <font size="1">
+ 	Portions generated with ScanCode and provided on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. No content created from ScanCode should be considered or used as legal advice. Consult an Attorney for any legal advice. ScanCode is a free software code scanning tool from nexB Inc. and others. Visit <a href="https://github.com/nexB/scancode-toolkit/">https://github.com/nexB/scancode-toolkit/</a> for support and download.
+</font>
+
+</body></html>
